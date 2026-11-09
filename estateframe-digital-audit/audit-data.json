@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "health_score": 77,
+    "baseline_score": 51,
+    "score_delta": 26,
+    "business_type": "Local Service — boutique creative studio (real-estate post-production) with worldwide digital delivery",
+    "launch_readiness": "launch-ready",
+    "re_audit_date": "2026-11-09",
+    "top_findings": [
+      "Content maturity: no case studies, no named editor bios, no journal — limits E-E-A-T ceiling",
+      "Placeholder testimonials still on home page — explicitly self-flagged as representative",
+      "Google Fonts still via CSS @import — deferred next/font migration",
+      "Portfolio images still JPG — unoptimized:true in next.config.ts prevents automatic WebP",
+      "Pre-launch — CrUX, GSC, backlink, and CWV field data cannot be measured yet"
+    ],
+    "quick_wins_remaining": [
+      "Remove placeholder testimonials section OR send real quotes",
+      "Migrate fonts to next/font (45 min, +3 Performance)",
+      "Flip images.unoptimized to false now that sharp is installed (+2 Images)",
+      "Extend optimize-images.mjs to batch-convert portfolio JPGs to WebP (+4 Images)"
+    ],
+    "pre_launch_blockers_resolved": [
+      "✅ Real phone and email replace placeholders in all code + JSON-LD",
+      "✅ robots.txt live with sitemap pointer",
+      "✅ sitemap.xml live with 6 routes",
+      "✅ ProfessionalService JSON-LD in layout",
+      "✅ llms.txt live",
+      "✅ Security headers active (HSTS, nosniff, Referrer-Policy, X-Frame-Options, Permissions-Policy)",
+      "✅ Favicon 1.6 MB → 2 KB, Apple icon 1.6 MB → 56 KB, Hero logo 1.52 MB → 308 KB"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "weight_pct": 22,
+      "score": 82,
+      "baseline_score": 42,
+      "delta": 40,
+      "what_works": [
+        "robots.txt live with sitemap pointer and AI crawler allow rules",
+        "sitemap.xml live with 6 routes and change frequency metadata",
+        "Canonical declared on every page via alternates.canonical",
+        "5 security headers configured and verified live",
+        "Favicon + Apple touch icon shrunk to 2 KB and 56 KB",
+        "13 static routes all build and pre-render cleanly"
+      ],
+      "remaining_findings": [
+        { "title": "images.unoptimized is still true in next.config.ts", "severity": "Low", "description": "Prevents Next.js from auto-serving WebP to supporting browsers.", "recommendation": "Flip to false (default). Sharp is already installed as devDependency. Verify in DevTools Network tab after deploy." },
+        { "title": "Deploy-dependent items unmeasured", "severity": "Info", "description": "CrUX, GSC coverage, real-world header behavior, HTTP/2 usage all require public URL.", "recommendation": "Re-run /seo audit within 7 days of launch." }
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "weight_pct": 23,
+      "score": 72,
+      "baseline_score": 58,
+      "delta": 14,
+      "what_works": [
+        "Service descriptions rewritten with explicit keywords and concrete details",
+        "FAQ expanded 10 → 18 covering pricing, file formats, turnaround, HDR vs single, iPhone, MLS exports",
+        "About page restructured with What we do / Who we serve / How we work",
+        "Hero support paragraph keyword-direct",
+        "Factual claims replace abstract editorial language"
+      ],
+      "remaining_findings": [
+        { "title": "No named editor bios", "severity": "High", "description": "About page still describes studio in third person without naming people.", "recommendation": "Add 2–4 named editors with role, years at craft, one representative frame." },
+        { "title": "Placeholder testimonials still on home page", "severity": "High", "description": "Testimonials.ts carries 'representative notes' placeholder text with placeholder names.", "recommendation": "Replace with real quotes under written permission, OR remove section entirely until real quotes exist." },
+        { "title": "No case studies published", "severity": "High", "description": "Portfolio is still a thumbnail gallery; no narrative case study.", "recommendation": "Publish 2–3 case studies at /case-studies/[slug] with embedded before/after." },
+        { "title": "No blog or journal channel", "severity": "Medium", "description": "No /journal route.", "recommendation": "Launch /journal with 4–6 seed posts covering HDR workflow, bracket best practices, twilight, virtual staging, item removal, drone finishing." }
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "weight_pct": 20,
+      "score": 86,
+      "baseline_score": 68,
+      "delta": 18,
+      "what_works": [
+        "Titles keyword-first on Services, Portfolio, About, HDR, Contact",
+        "OpenGraph + Twitter card metadata on every page",
+        "Canonical URLs declared everywhere",
+        "Sitewide title template '%s | EstateFrame Digital'",
+        "Single H1 per page, semantic H2/H3 hierarchy",
+        "Clean internal linking with descriptive anchor text"
+      ],
+      "remaining_findings": [
+        { "title": "Home h1 remains editorial (no target keyword)", "severity": "Low", "description": "'The frame makes the property' is brand-strong but keyword-neutral.", "recommendation": "Acceptable trade-off; the strong eyebrow provides keyword presence." }
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "weight_pct": 10,
+      "score": 70,
+      "baseline_score": 8,
+      "delta": 62,
+      "what_works": [
+        "Sitewide ProfessionalService in app/layout.tsx with @id, services, areaServed",
+        "Per-service Service graph (8 blocks) on /services",
+        "BreadcrumbList on /HDR matches visual breadcrumb"
+      ],
+      "remaining_findings": [
+        { "title": "No ImageObject on hero frames", "severity": "Low", "description": "Six HDR hero frames not marked as studio-authored.", "recommendation": "Add ImageObject on hero frames referencing sitewide @id as creator." },
+        { "title": "No Review schema (correct)", "severity": "Info", "description": "Testimonials are still placeholder; adding Review schema would violate Google guidelines.", "recommendation": "Defer until real client testimonials with written permission exist." }
+      ]
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
+      "weight_pct": 10,
+      "score": 72,
+      "baseline_score": 68,
+      "delta": 4,
+      "what_works": [
+        "Favicon 1.6 MB → 2 KB",
+        "Apple icon 1.6 MB → 56 KB",
+        "Hero logo 1.52 MB → 308 KB",
+        "13 statically generated routes",
+        "No third-party analytics loaded yet"
+      ],
+      "remaining_findings": [
+        { "title": "Google Fonts still loaded via CSS @import", "severity": "Medium", "description": "@import blocks CSS parsing and serializes font fetch.", "recommendation": "Migrate to next/font for self-hosted fonts. 45 min effort. Risk: CSS variable rename ripples." },
+        { "title": "Portfolio images still JPG with no pre-optimized WebP siblings", "severity": "Medium", "description": "45 JPGs in public/images/.", "recommendation": "Extend optimize-images.mjs to batch-generate WebP siblings; or flip images.unoptimized to false so Next handles WebP automatically." },
+        { "title": "Hero video LCP risk unmeasured", "severity": "Medium", "description": "Autoplay video on home; file size and poster weight not profiled.", "recommendation": "Measure after deploy. If LCP > 2.5s on mobile, gate video behind viewport intersection." }
+      ]
+    },
+    {
+      "name": "AI Search Readiness",
+      "weight_pct": 10,
+      "score": 68,
+      "baseline_score": 32,
+      "delta": 36,
+      "what_works": [
+        "llms.txt live and specific",
+        "Sitewide ProfessionalService JSON-LD carries entity identity",
+        "18 direct-answer FAQ passages = 18 citeable fragments",
+        "Content uses explicit factual claims (turnaround times, bracket counts, specific camera brands)"
+      ],
+      "remaining_findings": [
+        { "title": "No named authors", "severity": "High", "description": "Content attribution to studio only, no individual creators.", "recommendation": "Add editor bios to /about and consider Person schema." },
+        { "title": "No long-form procedural explainer", "severity": "Medium", "description": "4-bullet pipeline on home; no deep walkthrough.", "recommendation": "Publish 1,200–1,800 word explainer 'How we compose a frame — brief to delivery'." }
+      ]
+    },
+    {
+      "name": "Images",
+      "weight_pct": 5,
+      "score": 78,
+      "baseline_score": 54,
+      "delta": 24,
+      "what_works": [
+        "Favicon + Apple icon + hero logo all right-sized",
+        "Alt text present and descriptive on every next/image usage",
+        "sharp installed as devDependency",
+        "optimize-images.mjs is a reusable script",
+        "priority flag correctly used on above-fold hero only"
+      ],
+      "remaining_findings": [
+        { "title": "images.unoptimized: true blocks Next WebP serving", "severity": "Medium", "description": "Config prevents automatic WebP negotiation.", "recommendation": "Flip to false; sharp is already installed." },
+        { "title": "Portfolio JPGs not pre-optimized", "severity": "Medium", "description": "45 JPGs still at source quality.", "recommendation": "Extend optimize-images.mjs with a batch WebP step." }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Launch prep (today, ≤30 min)",
+        "timeframe": "Immediately",
+        "items": [
+          "Decide on testimonials: remove placeholders OR provide real quotes",
+          "Review Open Graph images (currently logo as fallback) — commission 1200×630 cards per page later",
+          "Commit everything from today in a clean commit series",
+          "Deploy to Vercel (or hosting of choice) with DNS pointing estateframe.digital at the deploy"
+        ]
+      },
+      {
+        "name": "Phase 2: First week post-launch",
+        "timeframe": "Week 1",
+        "items": [
+          "Verify Google Search Console ownership, submit sitemap",
+          "Verify Bing Webmaster Tools, submit sitemap",
+          "Install Vercel Analytics (zero runtime cost) or Plausible",
+          "Flip images.unoptimized to false in next.config.ts",
+          "Migrate fonts to next/font",
+          "Pre-optimize portfolio JPGs via extended optimize-images.mjs"
+        ]
+      },
+      {
+        "name": "Phase 3: Content & authority (weeks 2-6)",
+        "timeframe": "Weeks 2-6",
+        "items": [
+          "Publish 2 case studies at /case-studies/[slug]",
+          "Add 2-4 named editor bios on /about with Person schema",
+          "Launch /journal with 4-6 seed posts",
+          "Create Google Business Profile with LocalBusiness schema"
+        ]
+      },
+      {
+        "name": "Phase 4: Monitoring",
+        "timeframe": "Ongoing",
+        "items": [
+          "Weekly check: GSC coverage trend, impressions, CTR",
+          "Weekly check: Vercel Analytics p75 LCP/CLS/INP by page",
+          "Monthly: /seo drift compare against stored baseline",
+          "Quarterly: Full /seo audit — target Health Score ≥ 85 within 90 days"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "re_audit_report": "RE-AUDIT-NOV-09.md",
+    "baseline_report": "FULL-AUDIT-REPORT.md",
+    "baseline_action_plan": "ACTION-PLAN.md"
+  }
+}

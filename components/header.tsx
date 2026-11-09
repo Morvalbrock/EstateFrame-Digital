@@ -69,12 +69,12 @@ export function Header() {
 
         <div className="header-actions">
           <a
-            href="tel:+910000000000"
+            href="tel:+916383750315"
             className="header-phone-action"
             aria-label="Direct studio line"
           >
             <Phone size={14} />
-            <span>+91 00000 00000</span>
+            <span>+91 63837 50315</span>
           </a>
           <Link href="/contact" className="button button-accent header-cta">
             Commission Studio
@@ -115,11 +115,11 @@ export function Header() {
               Commission Studio
             </Link>
             <div className="mobile-drawer-contacts">
-              <a href="tel:+910000000000" className="mobile-contact-pill">
-                <Phone size={14} /> +91 00000 00000
+              <a href="tel:+916383750315" className="mobile-contact-pill">
+                <Phone size={14} /> +91 63837 50315
               </a>
               <a
-                href="https://wa.me/910000000000"
+                href="https://wa.me/916383750315"
                 target="_blank"
                 rel="noreferrer"
                 className="mobile-contact-pill"

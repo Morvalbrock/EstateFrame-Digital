@@ -35,12 +35,12 @@ export function Footer() {
               and cinematic property films — composed with the discipline of a magazine shoot.
             </p>
             <div className="footer-direct-contact">
-              <a href="tel:+910000000000" className="footer-contact-item">
+              <a href="tel:+916383750315" className="footer-contact-item">
                 <Phone size={14} />
-                <span>+91 00000 00000</span>
+                <span>+91 63837 50315</span>
               </a>
               <a
-                href="https://wa.me/910000000000"
+                href="https://wa.me/916383750315"
                 target="_blank"
                 rel="noreferrer"
                 className="footer-contact-item"
@@ -48,9 +48,9 @@ export function Footer() {
                 <MessageSquare size={14} />
                 <span>Studio on WhatsApp</span>
               </a>
-              <a href="mailto:hello@estateframe.digital" className="footer-contact-item">
+              <a href="mailto:agilansr222@gmail.com" className="footer-contact-item">
                 <Mail size={14} />
-                <span>hello@estateframe.digital</span>
+                <span>agilansr222@gmail.com</span>
               </a>
             </div>
           </div>

@@ -11,10 +11,43 @@ import {
   stagingComparisons,
 } from "@/data/comparisons";
 
+const PAGE_TITLE = "Real Estate Photo Editing Services — EstateFrame Digital";
+const PAGE_DESC =
+  "Boutique real estate photo editing services — single-frame, HDR blending, day-to-night, twilight, virtual staging, property film, item removal, aerial drone. Composed with editorial discipline. Commission a test frame →";
+
 export const metadata = {
-  title: "The Craft — Services | EstateFrame Digital",
-  description:
-    "Eight disciplines composed with editorial discipline: single-frame, HDR, day-to-night, twilight, virtual staging, property film, item removal, and aerial drone finishing.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: "/services" },
+  openGraph: {
+    type: "website",
+    url: "https://estateframe.digital/services",
+    siteName: "EstateFrame Digital",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [{ url: "/images/EstateFrame_logo.png", width: 1024, height: 1024, alt: "EstateFrame Digital studio mark" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: ["/images/EstateFrame_logo.png"],
+  },
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@graph": services.map((service) => ({
+    "@type": "Service",
+    "@id": `https://estateframe.digital/services#${service.id}`,
+    name: service.title,
+    serviceType: service.title,
+    description: service.fullDescription,
+    provider: { "@id": "https://estateframe.digital/#studio" },
+    areaServed: { "@type": "Place", name: "Worldwide" },
+    url: `https://estateframe.digital/services#${service.id}`,
+  })),
 };
 
 const comparisonPresetMap: Record<string, string> = {
@@ -30,6 +63,10 @@ const comparisonPresetMap: Record<string, string> = {
 export default function ServicesPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+      />
       {/* HERO */}
       <section className="page-hero-banner container">
         <span className="eyebrow">The craft</span>
@@ -221,8 +258,8 @@ export default function ServicesPage() {
             <Link href="/contact" className="button button-accent cta-large-btn">
               Commission Studio <ArrowRight size={14} />
             </Link>
-            <a href="tel:+910000000000" className="phone-cta-link">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="phone-cta-link">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
           </div>
         </div>

@@ -1,0 +1,38 @@
+# EstateFrame Digital
+
+> Real estate photo and video editing studio based in India, serving real estate photographers, agencies, and brokerages across the United States, Canada, Australia, the UK, New Zealand, and worldwide. Eight disciplines: HDR blending, single image editing, day-to-night conversion, twilight enhancement, virtual staging, property film, item removal, aerial drone editing. Overnight turnaround for US and Canadian photographers via time-zone offset.
+
+## Markets served
+
+- **United States** — MLS-ready delivery for Compass, Coldwell Banker, Keller Williams, RE/MAX, Sotheby's International Realty, Berkshire Hathaway HomeServices, Zillow Premier Agent, and independent brokerages.
+- **Canada** — Realtor.ca and TRREB workflows for Royal LePage, Century 21 Canada, Sutton, Re/Max Canada, Chestnut Park, and independents.
+- **Australia** — realestate.com.au, Domain.com.au, Rate My Agent delivery for Ray White, LJ Hooker, Harcourts, Belle Property, McGrath Estate Agents, and independent photographers.
+- **UK, New Zealand, and worldwide** via cloud link.
+
+## The craft
+
+- [Services — the eight disciplines](https://estateframe.digital/services): single-frame composition, HDR blending, day-to-night conversion, twilight finishing, virtual staging, property film, item removal, aerial & drone finishing.
+- [The HDR Studio](https://estateframe.digital/HDR): six real bracketed sets, raw to resolved — composed by hand, not auto-merged.
+- [Portfolio](https://estateframe.digital/portfolio): a quiet catalog of composed frames across the studio's disciplines.
+
+## About
+
+- [The Studio](https://estateframe.digital/about): a small post-production studio composing for photographers, agencies, and developers who treat the image as part of the architecture.
+- [Commission a brief](https://estateframe.digital/contact): share a frame, send a RAW set, or request a complimentary test frame.
+
+## The time-zone advantage
+
+The studio operates on India Standard Time (UTC+5:30). Our workday overlaps your overnight — files shipped at end-of-shoot on US Pacific, US Eastern, or Australian Eastern time come back as finished folders before your next morning. Rush folders ship in under two hours regardless of time zone.
+
+## How the studio works
+
+- Rush folders returned in under two hours — no surcharge.
+- Revisions resolved inside sixty minutes — unbilled, unlimited.
+- Complimentary test frame on every commission — the studio delivers a resolved frame inside your preferred window before you commit.
+- Every frame is handled by a human editor calibrated to the photographer's camera profile.
+- Delivery worldwide via secure cloud transfer (Drive, Dropbox, WeTransfer, OneDrive).
+- Payment in USD, CAD, AUD, GBP, NZD, or INR via Stripe, Wise, PayPal, or bank transfer.
+
+## Attribution
+
+Composed and operated by EstateFrame Digital. Content on this site is original editorial writing about the studio and its craft. Citations are welcome; please attribute to EstateFrame Digital and link the canonical page.

@@ -57,11 +57,11 @@ export function ContactForm() {
             To commission the studio, reach EstateFrame Digital directly through any of the lines below.
           </p>
           <div className="feedback-quick-actions">
-            <a href="tel:+910000000000" className="button button-primary">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="button button-primary">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
             <a
-              href="https://wa.me/910000000000"
+              href="https://wa.me/916383750315"
               target="_blank"
               rel="noreferrer"
               className="button button-secondary"
@@ -249,7 +249,7 @@ export function ContactForm() {
               )}
             </button>
             <p className="form-disclaimer-note">
-              Prototype form. For live commissions, call +91 00000 00000 or write hello@estateframe.digital.
+              Prototype form. For live commissions, call +91 63837 50315 or write agilansr222@gmail.com.
             </p>
           </div>
         </form>

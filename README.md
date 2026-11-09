@@ -19,7 +19,7 @@ A Next.js starter for EstateFrame Digital, a boutique real-estate post-productio
 - Reusable header, footer, before/after slider, portfolio gallery/lightbox, FAQ accordion, and brief form
 - SEO metadata
 - Accessible focus styles and reduced-motion support
-- Phone and WhatsApp links (currently placeholders — `+91 00000 00000`)
+- Phone and WhatsApp links (currently placeholders — `+91 63837 50315`)
 
 ## Requirements
 
@@ -44,7 +44,7 @@ npm start
 
 ## Before publishing
 
-1. Replace placeholder contact details (`+91 00000 00000`, `hello@estateframe.digital`) with real values across pages, header, footer, and metadata.
+1. Replace placeholder contact details (`+91 63837 50315`, `agilansr222@gmail.com`) with real values across pages, header, footer, and metadata.
 2. Replace the existing stock/demo imagery in `public/images/` with licensed, client-approved frames. The hero comparison uses illustrative pairs — swap each before with the real source frame of its after.
 3. The contact form is a UI prototype — connect it to a form provider or inbox before launch.
 4. Set the production domain in `app/layout.tsx` metadata (`metadataBase`).

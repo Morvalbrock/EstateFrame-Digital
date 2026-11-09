@@ -3,10 +3,29 @@ import { ArrowRight, Phone } from "lucide-react";
 import { PortfolioGallery } from "@/components/portfolio-gallery";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 
+const PAGE_TITLE = "Real Estate Editing Portfolio — HDR, Twilight, Staging | EstateFrame Digital";
+const PAGE_DESC =
+  "A quiet catalog of composed frames across HDR interiors, twilight exteriors, virtual staging, item removal, and property film. Selected work from EstateFrame Digital.";
+
 export const metadata = {
-  title: "Portfolio — Selected Work | EstateFrame Digital",
-  description:
-    "A quiet catalogue of composed frames — HDR interiors, twilight exteriors, virtual staging, item removal, and property film from EstateFrame Digital.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: "/portfolio" },
+  openGraph: {
+    type: "website",
+    url: "https://estateframe.digital/portfolio",
+    siteName: "EstateFrame Digital",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [{ url: "/images/hdr/hdr-sample-4-after.jpg", width: 1200, height: 800, alt: "Composed interior from the EstateFrame Digital portfolio" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: ["/images/hdr/hdr-sample-4-after.jpg"],
+  },
 };
 
 export default function PortfolioPage() {
@@ -16,7 +35,7 @@ export default function PortfolioPage() {
       <section className="page-hero-banner container">
         <span className="eyebrow">Selected work</span>
         <h1 className="page-hero-title">
-          A quiet catalogue of composed frames.
+          A quiet catalog of composed frames.
         </h1>
         <p className="page-hero-subtitle">
           A rotating cut from across the studio&apos;s disciplines. Filter by craft, drag the comparison to see the
@@ -45,7 +64,7 @@ export default function PortfolioPage() {
         <div className="gallery-header-row">
           <div>
             <span className="eyebrow">By craft</span>
-            <h2 className="section-title">The catalogue.</h2>
+            <h2 className="section-title">The catalog.</h2>
           </div>
           <p className="gallery-disclaimer-note">
             Representative studio work — individual client frames available under commission brief.
@@ -72,8 +91,8 @@ export default function PortfolioPage() {
             <Link href="/contact" className="button button-accent cta-large-btn">
               Commission Studio <ArrowRight size={14} />
             </Link>
-            <a href="tel:+910000000000" className="phone-cta-link">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="phone-cta-link">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
           </div>
         </div>

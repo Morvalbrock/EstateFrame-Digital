@@ -14,15 +14,48 @@ import {
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { hdrComparisons } from "@/data/comparisons";
 
+const PAGE_TITLE = "HDR Studio — Real Brackets, Resolved | EstateFrame Digital";
+const PAGE_DESC =
+  "Real estate HDR photo editing by hand — six real bracketed sets, raw to resolved. Composed interiors with honest window pulls, no halo, true architectural line.";
+
 export const metadata: Metadata = {
-  title: "The HDR Studio — Real Brackets, Resolved | EstateFrame Digital",
-  description:
-    "Six real bracketed sets, raw to resolved. EstateFrame Digital composes HDR interiors by hand — exposure, line, and tone, held in balance.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: "/HDR" },
+  openGraph: {
+    type: "website",
+    url: "https://estateframe.digital/HDR",
+    siteName: "EstateFrame Digital",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [{ url: "/images/hdr/hdr-sample-1-after.jpg", width: 1200, height: 800, alt: "Composed HDR interior with honest window pull — EstateFrame Digital" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: ["/images/hdr/hdr-sample-1-after.jpg"],
+  },
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://estateframe.digital/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://estateframe.digital/services" },
+    { "@type": "ListItem", position: 3, name: "HDR Studio", item: "https://estateframe.digital/HDR" },
+  ],
 };
 
 export default function HDRPage() {
   return (
     <div className="page-wrapper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* HERO */}
       <section className="page-hero-banner container hdr-page-hero">
         <div className="hdr-top-navigation-row">
@@ -133,7 +166,7 @@ export default function HDRPage() {
             <span className="eyebrow">Method</span>
             <h2 className="section-title">Why the frame holds — and the preset doesn&apos;t.</h2>
             <p className="section-lead-paragraph centered">
-              Automated HDR flattens the room and haloes the window. The studio composes by hand — colour science
+              Automated HDR flattens the room and haloes the window. The studio composes by hand — color science
               in service of aesthetic judgement, not the other way around.
             </p>
           </div>
@@ -147,7 +180,7 @@ export default function HDRPage() {
               </p>
               <ul className="capability-bullet-list">
                 <li>3 to 7 bracket merges</li>
-                <li>Handheld stabilisation</li>
+                <li>Handheld stabilization</li>
                 <li>Curtain and tree ghost removal</li>
               </ul>
             </div>
@@ -156,7 +189,7 @@ export default function HDRPage() {
               <Eye size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
               <h3>Window pull, without the halo</h3>
               <p>
-                Rather than mask and muddy, the studio pulls the view through — pool, garden, sky — with outdoor colour that feels like outdoor colour.
+                Rather than mask and muddy, the studio pulls the view through — pool, garden, sky — with outdoor color that feels like outdoor color.
               </p>
               <ul className="capability-bullet-list">
                 <li>Reflection and glare, softened</li>
@@ -167,7 +200,7 @@ export default function HDRPage() {
 
             <div className="capability-column-card">
               <SlidersHorizontal size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
-              <h3>Colour cast &amp; material truth</h3>
+              <h3>Color cast &amp; material truth</h3>
               <p>
                 Incandescent yellow and daylight blue cleared from walls and ceilings — timber, stone, and painted surfaces read as themselves.
               </p>
@@ -212,8 +245,8 @@ export default function HDRPage() {
             <Link href="/contact" className="button button-accent cta-large-btn">
               Request a Test Frame <ArrowRight size={14} />
             </Link>
-            <a href="tel:+910000000000" className="phone-cta-link">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="phone-cta-link">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
           </div>
         </div>

@@ -2,10 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Users, Sparkles, Phone } from "lucide-react";
 
+const PAGE_TITLE = "About the Studio — Boutique Real Estate Post-Production | EstateFrame Digital";
+const PAGE_DESC =
+  "EstateFrame Digital is a boutique post-production studio composing for photographers, agencies, and developers who treat the real estate image as part of the architecture.";
+
 export const metadata = {
-  title: "The Studio | EstateFrame Digital",
-  description:
-    "EstateFrame Digital is a quiet post-production studio for real estate — HDR, twilight, virtual staging, drone, item removal, and property films composed with editorial discipline.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: "/about" },
+  openGraph: {
+    type: "website",
+    url: "https://estateframe.digital/about",
+    siteName: "EstateFrame Digital",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [{ url: "/images/hdr/hdr-sample-2-after.jpg", width: 1200, height: 800, alt: "Resolved interior representing the EstateFrame Digital studio voice" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: ["/images/hdr/hdr-sample-2-after.jpg"],
+  },
 };
 
 const aboutHeroImg = "/images/hdr/hdr-sample-2-after.jpg";
@@ -21,8 +40,7 @@ export default function AboutPage() {
           A quiet partner for the frame that has to earn attention.
         </h1>
         <p className="page-hero-subtitle">
-          EstateFrame Digital is a small post-production studio composing for photographers, agencies, and
-          developers who treat the image as part of the architecture — not an afterthought.
+          EstateFrame Digital is a boutique real estate photo and video editing studio based in India, serving real estate photographers and agencies across the United States, Canada, and Australia. HDR, twilight, virtual staging, item removal, drone finishing, and property film — delivered overnight via cloud link, calibrated to your camera and listing platform.
         </p>
       </section>
 
@@ -32,19 +50,23 @@ export default function AboutPage() {
           <span className="eyebrow">The intent</span>
           <h2 className="section-title">Resolved frames, composed by hand — not rendered by preset.</h2>
           <p className="about-body-paragraph">
-            The studio exists because the listing image has become the architecture of the property. Buyers
-            decide in a scroll; a careless frame undoes the room. We work behind the lens, resolving exposure,
-            line, tone, and composition, so what the viewer sees is the property — not the post.
+            <strong>What we do.</strong> We edit real estate photos and videos — HDR blending, single image finishing, day-to-night conversion, twilight enhancement, virtual staging, item removal, aerial drone finishing, and property film. Every frame is composed by hand against your camera profile. Standard turnaround is 12 to 24 hours for photos and 3 to 5 business days for video. Rush folders ship in under two hours. Revisions are free and returned within the hour.
           </p>
           <p className="about-body-paragraph">
-            Every frame is handled by a human editor, calibrated to the camera profile of the photographer who
-            shot it. No filter stack, no cookie-cutter preset. The same quiet discipline, from a single luxury hero
-            to a hundred-image volume folder.
+            <strong>Who we serve.</strong> US real estate photographers shipping MLS folders for Compass, Coldwell Banker, Keller Williams, and RE/MAX; Canadian photographers on Realtor.ca workflows with Royal LePage, Century 21, Sutton; Australian photographers delivering to realestate.com.au and Domain.com.au for Ray White, LJ Hooker, Harcourts, Belle Property. Also serving independent listing photographers, marketing teams, and property developers across the UK, New Zealand, and worldwide.
+          </p>
+          <p className="about-body-paragraph">
+            <strong>The time-zone advantage.</strong> We work from India (IST, UTC+5:30). You ship files at end-of-shoot on US Pacific, US Eastern, or Australian Eastern time; our daytime is your overnight. Hero frames back before the next morning for US and Canadian photographers; back in time for afternoon follow-ups for Australian photographers. No night-shift photographer editing their own folder at 2am.
+          </p>
+          <p className="about-body-paragraph">
+            <strong>How we work.</strong> You share RAW files through any cloud link — Drive, Dropbox, WeTransfer, OneDrive. We download, calibrate white balance to your camera, compose exposure, correct line, resolve tone, and return the folder in print-ready and MLS-ready formats, named to your convention. No portal to log into. No filter stack. Just the frame, composed.
           </p>
           <div className="about-pillar-tags">
-            <span className="about-tag">Natural light</span>
-            <span className="about-tag">Honest tone</span>
-            <span className="about-tag">Editorial restraint</span>
+            <span className="about-tag">US · CA · AU</span>
+            <span className="about-tag">Overnight delivery</span>
+            <span className="about-tag">MLS · Realtor.ca · realestate.com.au</span>
+            <span className="about-tag">Free revisions</span>
+            <span className="about-tag">Natural light · honest tone</span>
           </div>
         </div>
 
@@ -157,7 +179,7 @@ export default function AboutPage() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>Colour calibration</strong>
+                  <strong>Color calibration</strong>
                   <p>White balance harmonised across hallways, living rooms, and exteriors — the room reads as one.</p>
                 </div>
               </div>
@@ -201,7 +223,7 @@ export default function AboutPage() {
             <div className="collab-feature-card">
               <ShieldCheck size={24} style={{ color: "var(--bronze)", marginBottom: "18px" }} />
               <h3>Consistent voice</h3>
-              <p>Your colour temperature, contrast, and sky style are stored and applied uniformly across every folder.</p>
+              <p>Your color temperature, contrast, and sky style are stored and applied uniformly across every folder.</p>
             </div>
 
             <div className="collab-feature-card">
@@ -242,8 +264,8 @@ export default function AboutPage() {
             <Link href="/contact" className="button button-accent cta-large-btn">
               Commission Studio <ArrowRight size={14} />
             </Link>
-            <a href="tel:+910000000000" className="phone-cta-link">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="phone-cta-link">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
           </div>
         </div>

@@ -10,10 +10,29 @@ import {
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
+const PAGE_TITLE = "Commission the Studio — EstateFrame Digital";
+const PAGE_DESC =
+  "Commission EstateFrame Digital for HDR, twilight, virtual staging, drone, item removal, and cinematic property film. Rush folders under two hours. Complimentary test frame on request.";
+
 export const metadata = {
-  title: "Commission the Studio | EstateFrame Digital",
-  description:
-    "Commission EstateFrame Digital for HDR, twilight, virtual staging, drone, item removal, and cinematic property film. Call +91 00000 00000 or write hello@estateframe.digital.",
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    type: "website",
+    url: "https://estateframe.digital/contact",
+    siteName: "EstateFrame Digital",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [{ url: "/images/EstateFrame_logo.png", width: 1024, height: 1024, alt: "EstateFrame Digital studio mark" }],
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: ["/images/EstateFrame_logo.png"],
+  },
 };
 
 export default function ContactPage() {
@@ -43,18 +62,18 @@ export default function ContactPage() {
             </p>
 
             <div className="contact-buttons-stack">
-              <a href="tel:+910000000000" className="direct-contact-tile">
+              <a href="tel:+916383750315" className="direct-contact-tile">
                 <span className="tile-icon-circle">
                   <Phone size={18} />
                 </span>
                 <span className="tile-text-group">
                   <small className="tile-label">Studio line</small>
-                  <strong className="tile-value">+91 00000 00000</strong>
+                  <strong className="tile-value">+91 63837 50315</strong>
                 </span>
               </a>
 
               <a
-                href="https://wa.me/910000000000"
+                href="https://wa.me/916383750315"
                 target="_blank"
                 rel="noreferrer"
                 className="direct-contact-tile whatsapp-tile"
@@ -68,13 +87,13 @@ export default function ContactPage() {
                 </span>
               </a>
 
-              <a href="mailto:hello@estateframe.digital" className="direct-contact-tile">
+              <a href="mailto:agilansr222@gmail.com" className="direct-contact-tile">
                 <span className="tile-icon-circle">
                   <Mail size={18} />
                 </span>
                 <span className="tile-text-group">
                   <small className="tile-label">Email the studio</small>
-                  <strong className="tile-value">hello@estateframe.digital</strong>
+                  <strong className="tile-value">agilansr222@gmail.com</strong>
                 </span>
               </a>
             </div>

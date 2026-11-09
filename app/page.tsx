@@ -34,9 +34,7 @@ export default function HomePage() {
         <div className="hero-split-grid">
           <div className="hero-content-column">
             <p className="hero-support-copy">
-              EstateFrame Digital is a quiet post-production studio composing HDR interiors, twilight exteriors,
-              virtual staging, drone retouches, and cinematic property films for the brokers and photographers
-              who care about the final image.
+              EstateFrame Digital is a real estate photo and video editing studio for US, Canadian, and Australian photographers, agencies, and brokerages. We blend HDR brackets, convert daytime exteriors to twilight, virtually stage empty rooms, retouch drone captures, remove items, and cut cinematic property films — all composed by hand, calibrated to your camera profile. Your overnight is our workday: send files at end-of-shoot, get the folder back before your next morning. Rush turnaround under two hours. Free revisions within the hour.
             </p>
 
             <div className="hero-cta-group">
@@ -91,12 +89,10 @@ export default function HomePage() {
       <section className="trust-strip-section" data-reveal>
         <div className="container trust-split-layout">
           <div className="trust-narrative-copy">
-            <span className="eyebrow">A quiet partner</span>
+            <span className="eyebrow">A quiet partner · US · Canada · Australia</span>
             <h2 className="section-title">A studio built for the way property is sold now.</h2>
             <p>
-              We work behind the lens — stabilising exposure, correcting line, staging the empty room, lifting the sky,
-              composing a film that outlasts a scroll. Every brief, from a single luxury hero to a volume listing pipeline,
-              is treated as editorial work.
+              We edit for real estate photographers and agencies across the United States, Canada, and Australia — MLS-ready folders for Compass, Coldwell Banker, Keller Williams, and RE/MAX; Realtor.ca-ready exports for Royal LePage, Century 21, and Sutton; realestate.com.au and Domain.com.au-ready frames for Ray White, LJ Hooker, Harcourts, and Belle Property. Eight disciplines, one studio voice, from a single luxury hero frame to a weekly volume pipeline.
             </p>
             <div className="trust-photo-card">
               <Image
@@ -252,7 +248,7 @@ export default function HomePage() {
         <div className="section-header-block">
           <div>
             <span className="eyebrow">Selected work</span>
-            <h2 className="section-title">A quiet catalogue of composed frames.</h2>
+            <h2 className="section-title">A quiet catalog of composed frames.</h2>
           </div>
           <p className="section-lead-paragraph">
             A rotating cut of recent studio work — interiors, exteriors, staging, and film. Press any frame to open
@@ -420,8 +416,8 @@ export default function HomePage() {
             <div className="faq-support-box">
               <span className="faq-box-title">A question not covered here?</span>
               <p>The studio answers directly — no form wall, no routing desk.</p>
-              <a href="tel:+910000000000" className="faq-phone-link">
-                <Phone size={14} /> +91 00000 00000
+              <a href="tel:+916383750315" className="faq-phone-link">
+                <Phone size={14} /> +91 63837 50315
               </a>
             </div>
           </div>
@@ -449,8 +445,8 @@ export default function HomePage() {
             <Link href="/contact" className="button button-accent cta-large-btn">
               Commission Studio <ArrowRight size={14} />
             </Link>
-            <a href="tel:+910000000000" className="phone-cta-link">
-              <Phone size={14} /> Call +91 00000 00000
+            <a href="tel:+916383750315" className="phone-cta-link">
+              <Phone size={14} /> Call +91 63837 50315
             </a>
           </div>
         </div>
