@@ -1,0 +1,21 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+.env*
+!.env.example
+.DS_Store
+*.log
+tsconfig.tsbuildinfo
+
+# IDE
+.idea/
+
+# Raw source media that must not ship through git (put web-ready copies under public/ with safe names)
+app/Sample Video/
+app/Day ToTwilight/
+app/virtual staging/
+app/Aerial & Drone/
+app/Object Removal/
+app/Single Image/

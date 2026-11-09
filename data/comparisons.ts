@@ -1,0 +1,212 @@
+export type ComparisonItem = {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  beforeImage: string;
+  afterImage: string;
+  beforeAlt: string;
+  afterAlt: string;
+};
+
+export const hdrComparisons: ComparisonItem[] = [
+  {
+    id: "hdr-sample-1",
+    title: "Living Room Window Pull & Exposure Balance",
+    category: "Sample 1",
+    description: "Multi-bracket blending balancing intense exterior window daylight with ambient indoor illumination.",
+    beforeImage: "/images/hdr/hdr-sample-1-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-1-after.jpg",
+    beforeAlt: "Raw exposure with uneven shadows and washed-out window highlights before HDR processing",
+    afterAlt: "Clean, natural real estate photograph with clear exterior view and balanced interior shadows",
+  },
+  {
+    id: "hdr-sample-2",
+    title: "Architectural Interior & Window Clarity",
+    category: "Sample 2",
+    description: "Balanced dynamic range preserving delicate textures, floor timber reflections, and clear window scenery.",
+    beforeImage: "/images/hdr/hdr-sample-2-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-2-after.jpg",
+    beforeAlt: "Interior room with blown out highlights and harsh light falloff before editing",
+    afterAlt: "Evenly balanced luxury interior with natural window view and true-to-life architectural tones",
+  },
+  {
+    id: "hdr-sample-3",
+    title: "Shadow Recovery & True-Tone Lighting",
+    category: "Sample 3",
+    description: "Lifting deep room shadows and neutralizing color casts while preserving contrast and crisp textures.",
+    beforeImage: "/images/hdr/hdr-sample-3-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-3-after.jpg",
+    beforeAlt: "Interior room with dark shadow cast and uneven ambient warmth before HDR blending",
+    afterAlt: "Polished architectural photo with bright, natural shadows and crisp material details",
+  },
+  {
+    id: "hdr-sample-4",
+    title: "Natural Ambient Daylight Balancing",
+    category: "Sample 4",
+    description: "Harmonizing multiple natural and artificial light sources for an inviting, realistic property view.",
+    beforeImage: "/images/hdr/hdr-sample-4-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-4-after.jpg",
+    beforeAlt: "Interior space with uneven lighting and window glare before processing",
+    afterAlt: "Pristine real estate interior with clean whites, crisp walls, and vivid outdoor view",
+  },
+  {
+    id: "hdr-sample-5",
+    title: "High Dynamic Range Contrast Harmonization",
+    category: "Sample 5",
+    description: "Highlight recovery revealing outdoor greenery and sky without darkening delicate indoor finishes.",
+    beforeImage: "/images/hdr/hdr-sample-5-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-5-after.jpg",
+    beforeAlt: "Unedited exposure showing dark interior and overexposed outdoor light",
+    afterAlt: "Expertly graded HDR finish showcasing full spatial clarity and accurate surface tones",
+  },
+  {
+    id: "hdr-sample-6",
+    title: "Complete Exposure & Perspective Alignment",
+    category: "Sample 6",
+    description: "Flawless window pulling, wall leveling, and shadow tone balancing for editorial-level presentation.",
+    beforeImage: "/images/hdr/hdr-sample-6-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-6-after.jpg",
+    beforeAlt: "Raw unedited property capture with extreme contrast and washed-out windows",
+    afterAlt: "Final retouched HDR photograph ready for high-end MLS and print presentation",
+  },
+];
+
+export const twilightComparisons: ComparisonItem[] = [
+  {
+    id: "twilight-sample-1",
+    title: "Residential Day-to-Twilight Conversion",
+    category: "Sample 1",
+    description: "Full daylight exterior transformed into an atmospheric twilight scene with illuminated interior windows, architectural lighting, and sunset sky.",
+    beforeImage: "/images/day-to-twilight/twilight-sample-1-before.jpg",
+    afterImage: "/images/day-to-twilight/twilight-sample-1-after.jpg",
+    beforeAlt: "Daytime residential property exterior before twilight conversion",
+    afterAlt: "Atmospheric evening conversion with glowing windows and rich twilight sky glow",
+  },
+  {
+    id: "twilight-sample-2",
+    title: "Architectural Dusk Sky & Window Illumination",
+    category: "Sample 2",
+    description: "Natural daytime architectural capture converted into an alluring twilight presentation with warm lighting falloff and vivid dusk gradient.",
+    beforeImage: "/images/day-to-twilight/twilight-sample-2-before.jpg",
+    afterImage: "/images/day-to-twilight/twilight-sample-2-after.jpg",
+    beforeAlt: "Natural daylight exterior before dusk enhancement",
+    afterAlt: "Enriched dusk property exterior with illuminated fixtures and warm architectural depth",
+  },
+];
+
+export const stagingComparisons: ComparisonItem[] = [
+  {
+    id: "staging-sample-1",
+    title: "Open Living Suite Contemporary Staging",
+    category: "Room 1",
+    description: "Vacant open-plan living area digitally styled with modern designer sofa, stylish coffee table, rug, and contemporary wall art.",
+    beforeImage: "/images/virtual-staging/staging-sample-1-before.jpg",
+    afterImage: "/images/virtual-staging/staging-sample-1-after.jpg",
+    beforeAlt: "Empty vacant living room before digital virtual staging",
+    afterAlt: "Virtually staged modern living space with elegant furniture and warm styling",
+  },
+  {
+    id: "staging-sample-2",
+    title: "Modern Scandinavian Living & Lounge Staging",
+    category: "Room 2",
+    description: "Empty contemporary space decorated with plush seating, ambient illumination, curated textures, and interior plants.",
+    beforeImage: "/images/virtual-staging/staging-sample-2-before.jpg",
+    afterImage: "/images/virtual-staging/staging-sample-2-after.jpg",
+    beforeAlt: "Bare unfurnished room before virtual staging",
+    afterAlt: "Expertly staged living room showcasing space scale and premium interior furnishings",
+  },
+  {
+    id: "staging-sample-3",
+    title: "Sunlit Dining & Living Lounge Staging",
+    category: "Room 3",
+    description: "Unfurnished hardwood interior enhanced with dining table, pendant lighting, comfortable armchairs, and decorative finishes.",
+    beforeImage: "/images/virtual-staging/staging-sample-3-before.jpg",
+    afterImage: "/images/virtual-staging/staging-sample-3-after.jpg",
+    beforeAlt: "Empty wooden floor interior before staging",
+    afterAlt: "Warm and inviting furnished dining and lounge space with modern finishes",
+  },
+  {
+    id: "staging-sample-4",
+    title: "Cozy Master Bedroom Suite Staging",
+    category: "Room 4",
+    description: "Bare bedroom realistically dressed with king bed, textured throw blankets, nightstands, and soft ambient bedside lighting.",
+    beforeImage: "/images/virtual-staging/staging-sample-4-before.jpg",
+    afterImage: "/images/virtual-staging/staging-sample-4-after.jpg",
+    beforeAlt: "Empty bedroom with plain walls and bare carpet before staging",
+    afterAlt: "Cozy and appealing master bedroom suite staged with bed, pillows, lamps, and art",
+  },
+];
+
+export const comparisons: ComparisonItem[] = [
+  {
+    id: "single-image",
+    title: "Single Image Tone Calibration",
+    category: "Single Image",
+    description: "Natural white balance adjustment, shadow recovery, and warm ambient neutralization on single-exposure captures.",
+    beforeImage: "/images/single-image/single-sample-1-before.jpg",
+    afterImage: "/images/single-image/single-sample-1-after.jpg",
+    beforeAlt: "Raw single-shot interior with color cast and unlifted shadows",
+    afterAlt: "Calibrated interior with balanced tones and accurate architectural colors",
+  },
+  {
+    id: "hdr",
+    title: "HDR Exposure Balancing",
+    category: "HDR",
+    description: "Balanced exposures across bright window views and deep interior shadows for crisp, natural illumination.",
+    beforeImage: "/images/hdr/hdr-sample-1-before.jpg",
+    afterImage: "/images/hdr/hdr-sample-1-after.jpg",
+    beforeAlt: "Interior room with uneven lighting and bright window washout before HDR processing",
+    afterAlt: "Interior room with balanced window views, balanced contrast and natural white tones after HDR enhancement",
+  },
+  {
+    id: "day-to-night",
+    title: "Day-to-Night Conversion",
+    category: "Day to Night",
+    description: "Atmospheric evening conversion with deep twilight skies and realistic interior & exterior architectural glow.",
+    beforeImage: "/images/day-to-twilight/twilight-sample-1-before.jpg",
+    afterImage: "/images/day-to-twilight/twilight-sample-1-after.jpg",
+    beforeAlt: "Daytime residential property exterior before twilight conversion",
+    afterAlt: "Atmospheric twilight conversion with warm interior illumination and dusk sky glow",
+  },
+  {
+    id: "twilight",
+    title: "Twilight Dusk Polish",
+    category: "Twilight",
+    description: "Vibrant golden hour and dusk enhancement enriching sky saturation, edge definition, and porch lighting.",
+    beforeImage: "/images/day-to-twilight/twilight-sample-2-before.jpg",
+    afterImage: "/images/day-to-twilight/twilight-sample-2-after.jpg",
+    beforeAlt: "Unpolished daylight exterior before dusk enhancement",
+    afterAlt: "Enriched dusk property exterior with illuminated fixtures and warm architectural depth",
+  },
+  {
+    id: "staging",
+    title: "Virtual Room Staging",
+    category: "Staging",
+    description: "Digitally placed designer furnishings and accessories showing the scale, warmth, and full potential of empty spaces.",
+    beforeImage: "/images/virtual-staging/staging-sample-1-before.jpg",
+    afterImage: "/images/virtual-staging/staging-sample-1-after.jpg",
+    beforeAlt: "Empty contemporary room showing bare walls and unfilled floor area",
+    afterAlt: "Digitally furnished room showing modern sofa, ambient lighting, coffee table and art",
+  },
+  {
+    id: "item-removal",
+    title: "Object & Item Removal",
+    category: "Item Removal",
+    description: "Seamless erasure of cars, electrical cords, bins, and unwanted objects with natural texture reconstruction.",
+    beforeImage: "/images/object-removal/removal-sample-1-before.jpg",
+    afterImage: "/images/object-removal/removal-sample-1-after.jpg",
+    beforeAlt: "Property image with distractions and debris before decluttering",
+    afterAlt: "Spotless property image with seamless texture reconstruction",
+  },
+  {
+    id: "aerial",
+    title: "Aerial & Drone Polish",
+    category: "Aerial",
+    description: "Atmospheric haze cutting, horizon straightening, and vibrant landscape color enhancement.",
+    beforeImage: "/images/aerial/aerial-sample-1-before.jpg",
+    afterImage: "/images/aerial/aerial-sample-1-after.jpg",
+    beforeAlt: "Raw drone capture with haze and washed out horizon",
+    afterAlt: "Crisp aerial photograph with vivid greenery, leveled horizon, and rich water tones",
+  },
+];
