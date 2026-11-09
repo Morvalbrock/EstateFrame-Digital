@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, MessageSquare } from "lucide-react";
@@ -43,17 +44,14 @@ export function Header() {
           aria-label="EstateFrame Digital — home"
           onClick={() => setIsOpen(false)}
         >
-          <span
-            style={{
-              fontFamily: "Fraunces, serif",
-              fontSize: 22,
-              fontWeight: 300,
-              letterSpacing: "-0.02em",
-              color: "var(--ink)",
-            }}
-          >
-            EstateFrame<span style={{ color: "var(--bronze)", fontStyle: "italic" }}> Digital</span>
-          </span>
+          <Image
+            src="/images/EstateFrame_logo.png"
+            alt="EstateFrame Digital"
+            width={512}
+            height={512}
+            priority
+            className="brand-image"
+          />
         </Link>
 
         <nav className="desktop-nav" aria-label="Main navigation">

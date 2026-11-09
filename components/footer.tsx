@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, MessageSquare, ArrowUpRight, Mail } from "lucide-react";
 
@@ -21,18 +22,13 @@ export function Footer() {
         <div className="footer-columns-grid">
           <div className="footer-brand-column">
             <Link className="brand-logo footer-logo" href="/" aria-label="EstateFrame Digital — home">
-              <span
-                style={{
-                  fontFamily: "Fraunces, serif",
-                  fontSize: 24,
-                  fontWeight: 300,
-                  letterSpacing: "-0.02em",
-                  color: "var(--ink)",
-                }}
-              >
-                EstateFrame
-                <span style={{ color: "var(--bronze)", fontStyle: "italic" }}> Digital</span>
-              </span>
+              <Image
+                src="/images/EstateFrame_logo.png"
+                alt="EstateFrame Digital"
+                width={512}
+                height={512}
+                className="brand-image footer-brand-image"
+              />
             </Link>
             <p className="footer-about-copy">
               Editorial post-production for real estate — HDR, twilight, virtual staging, drone, item removal,

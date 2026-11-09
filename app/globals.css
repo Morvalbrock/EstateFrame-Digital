@@ -231,11 +231,15 @@ h3, h4 { font-variation-settings: "opsz" 24; letter-spacing: -0.01em; line-heigh
 
 .brand-image {
   display: block;
-  height: 40px;
+  height: 56px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.95;
+  border-radius: var(--radius-xs);
+}
+
+.footer-brand-image {
+  height: 96px;
+  margin-bottom: 4px;
 }
 
 .footer-logo-chip {
@@ -244,7 +248,12 @@ h3, h4 { font-variation-settings: "opsz" 24; letter-spacing: -0.01em; line-heigh
   padding: 0;
 }
 
-.footer-logo-chip .brand-image { height: 36px; }
+.footer-logo-chip .brand-image { height: 44px; }
+
+@media (max-width: 640px) {
+  .brand-image { height: 48px; }
+  .footer-brand-image { height: 80px; }
+}
 
 .desktop-nav { display: flex; align-items: center; gap: 30px; }
 
