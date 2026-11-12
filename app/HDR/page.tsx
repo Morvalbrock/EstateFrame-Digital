@@ -14,9 +14,9 @@ import {
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { hdrComparisons } from "@/data/comparisons";
 
-const PAGE_TITLE = "HDR Studio — Real Brackets, Resolved | EstateFrame Digital";
+const PAGE_TITLE = "AI HDR Real Estate Photo Editing | EstateFrame";
 const PAGE_DESC =
-  "Real estate HDR photo editing by hand — six real bracketed sets, raw to resolved. Composed interiors with honest window pulls, no halo, true architectural line.";
+  "AI HDR real estate photo editing with human QC — six real bracketed sets, RAW to delivered. Honest window pulls, no halo. MLS-compliant, 12-hour SLA.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -72,13 +72,14 @@ export default function HDRPage() {
           </a>
         </div>
 
-        <span className="eyebrow">The HDR Studio</span>
+        <span className="eyebrow">The HDR Studio · AI + Human QC</span>
         <h1 className="page-hero-title">
-          Six real brackets, resolved by hand.
+          AI HDR real estate photo editing — six real brackets.
         </h1>
         <p className="page-hero-subtitle">
-          Not generated. Not preset. Six actual multi-exposure sets from recent commissions — composed into
-          frames that hold the window, the room, and the architecture in a single breath.
+          Six multi-exposure sets from real commissions. AI blends 3-to-7 brackets at speed; a human editor verifies
+          no haloing, straight verticals, honest window pull, and your stored style preset across the folder. The
+          output: HDR frames that hold the window, the room, and the architecture — MLS-safe, 12-hour SLA.
         </p>
 
         <div className="hero-cta-group" style={{ marginTop: "32px", marginBottom: "20px" }}>
@@ -86,22 +87,22 @@ export default function HDRPage() {
             See the Six Frames <ArrowDown size={14} />
           </a>
           <Link href="/contact" className="button button-secondary">
-            Request a Test Frame <ArrowRight size={14} />
+            Try Two Free HDR Frames <ArrowRight size={14} />
           </Link>
         </div>
 
         <div className="hero-value-pills" style={{ marginTop: "32px" }}>
           <span className="value-pill">
-            <CheckCircle2 size={14} /> Multi-bracket blending
+            <CheckCircle2 size={14} /> AI bracket blending (3-to-7 exposures)
           </span>
           <span className="value-pill">
-            <CheckCircle2 size={14} /> Clean window pulls
+            <CheckCircle2 size={14} /> Human-verified window pulls
           </span>
           <span className="value-pill">
-            <CheckCircle2 size={14} /> Honest shadow recovery
+            <CheckCircle2 size={14} /> Style preset locked across the folder
           </span>
           <span className="value-pill">
-            <CheckCircle2 size={14} /> True architectural line
+            <CheckCircle2 size={14} /> MLS-safe retouching
           </span>
         </div>
       </section>
@@ -111,11 +112,11 @@ export default function HDRPage() {
         <div className="section-header-block">
           <div>
             <span className="eyebrow">Compare</span>
-            <h2 className="section-title">Drag the handle. The work speaks.</h2>
+            <h2 className="section-title">Drag the handle. RAW to AI-blended to human-verified.</h2>
           </div>
           <p className="section-lead-paragraph">
-            Cycle the six sample sets below — each one a real bracketed capture, composed into a resolved frame.
-            No preset, no filter stack.
+            Cycle six real bracket sets from recent US, Canadian, and Australian folders — each one blended by AI,
+            then signed off by a human editor against the style preset and MLS compliance checklist.
           </p>
         </div>
 
@@ -129,11 +130,11 @@ export default function HDRPage() {
         <div className="section-header-block">
           <div>
             <span className="eyebrow">The six frames</span>
-            <h2 className="section-title">Each one composed, not auto-merged.</h2>
+            <h2 className="section-title">AI-blended. Human-verified. Not auto-merged.</h2>
           </div>
           <p className="section-lead-paragraph">
-            Every set is balanced against the room it was shot in — calibrated for MLS, print editorial, and
-            digital feed in equal measure.
+            Every set is calibrated for MLS, print editorial, and digital feed — human editor runs the compliance
+            checklist before delivery, so the folder ships without the AI mistakes that get agents delisted.
           </p>
         </div>
 
@@ -164,37 +165,40 @@ export default function HDRPage() {
         <div className="container">
           <div className="section-header-block text-center-block">
             <span className="eyebrow">Method</span>
-            <h2 className="section-title">Why the frame holds — and the preset doesn&apos;t.</h2>
+            <h2 className="section-title">Why AI + human HDR beats AI-only.</h2>
             <p className="section-lead-paragraph centered">
-              Automated HDR flattens the room and haloes the window. The studio composes by hand — color science
-              in service of aesthetic judgement, not the other way around.
+              AI-only HDR tools flatten the room, halo the window, and drift mid-shoot. Our workflow: AI handles the
+              blend at speed, a human editor verifies the result against your style preset and the MLS compliance
+              checklist — folder-wide consistency, every time.
             </p>
           </div>
 
           <div className="capabilities-triad-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))" }}>
             <div className="capability-column-card">
               <Aperture size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
-              <h3>Alignment &amp; ghost correction</h3>
+              <h3>AI alignment &amp; ghost correction</h3>
               <p>
-                Multi-stop brackets aligned at sub-pixel precision — foliage drift corrected, handheld shake resolved, the composition held true.
+                AI blends 3-to-7 bracket exposures at sub-pixel precision — foliage drift corrected, handheld shake
+                resolved, human editor verifies no doubled edges or ghost artifacts remain.
               </p>
               <ul className="capability-bullet-list">
-                <li>3 to 7 bracket merges</li>
-                <li>Handheld stabilization</li>
-                <li>Curtain and tree ghost removal</li>
+                <li>3 to 7 bracket merges from your camera</li>
+                <li>Handheld stabilisation across exposures</li>
+                <li>Curtain and tree ghost removal, human-QC&apos;d</li>
               </ul>
             </div>
 
             <div className="capability-column-card">
               <Eye size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
-              <h3>Window pull, without the halo</h3>
+              <h3>Honest window pull, no halo</h3>
               <p>
-                Rather than mask and muddy, the studio pulls the view through — pool, garden, sky — with outdoor color that feels like outdoor color.
+                AI pulls the exterior view through — pool, garden, sky — with outdoor color that reads true; human
+                editor verifies no halo rim around the frame and no muddied reflections.
               </p>
               <ul className="capability-bullet-list">
-                <li>Reflection and glare, softened</li>
-                <li>Exterior tone kept honest</li>
-                <li>Edge definition, clean</li>
+                <li>Reflection and glare softened honestly</li>
+                <li>Exterior tone locked to your preset</li>
+                <li>Edge definition verified by hand</li>
               </ul>
             </div>
 
@@ -202,25 +206,27 @@ export default function HDRPage() {
               <SlidersHorizontal size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
               <h3>Color cast &amp; material truth</h3>
               <p>
-                Incandescent yellow and daylight blue cleared from walls and ceilings — timber, stone, and painted surfaces read as themselves.
+                Incandescent yellow and daylight blue cleared across walls, ceilings, and floors; timber, stone, and
+                painted surfaces read as themselves. Flambient (ambient + speedlight) blended when both are shot.
               </p>
               <ul className="capability-bullet-list">
-                <li>Wood grain and stone, true</li>
-                <li>Ceilings held neutral</li>
-                <li>Ambient and flash in harmony</li>
+                <li>Wood grain and stone held true to colour</li>
+                <li>Ceilings held neutral, not green-cast</li>
+                <li>Flambient ambient + flash integration</li>
               </ul>
             </div>
 
             <div className="capability-column-card">
               <Layers size={24} style={{ marginBottom: "22px", color: "var(--bronze)" }} />
-              <h3>Line, perspective, geometry</h3>
+              <h3>Line, perspective &amp; MLS QC</h3>
               <p>
-                Vertical line pulled true, wide-angle distortion cleared, the crop composed — the architecture reads.
+                Verticals pulled true, wide-angle distortion cleared, the architecture holds. Human editor runs every
+                frame through the MLS compliance checklist before sign-off — no removed permanent fixtures.
               </p>
               <ul className="capability-bullet-list">
-                <li>True 90° vertical</li>
+                <li>True 90° vertical correction</li>
                 <li>Barrel distortion resolved</li>
-                <li>High-resolution master export</li>
+                <li>MLS permanent-fixture rules checked</li>
               </ul>
             </div>
           </div>
@@ -228,16 +234,16 @@ export default function HDRPage() {
       </section>
 
       {/* CTA */}
-      <section className="final-cta-section" data-reveal>
+      <section className="final-cta-section" data-reveal suppressHydrationWarning>
         <div className="container final-cta-wrapper">
           <div className="final-cta-content">
             <span className="eyebrow">Begin</span>
             <h2 className="section-title text-light">
-              Send a bracket. See the studio answer.
+              Send a bracket set. See the AI + human HDR workflow answer.
             </h2>
             <p className="final-cta-text">
-              Share a three- or five-stop set from your own camera. The studio will return a resolved frame — free,
-              in your preferred window, so you can read the work on your own capture.
+              Share a three- or five-stop bracket from your own camera. We return an AI-blended, human-verified frame
+              inside your preferred window — free, so you can judge the output on your own capture before you commission.
             </p>
           </div>
 

@@ -10,9 +10,9 @@ import {
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 
-const PAGE_TITLE = "Commission the Studio — EstateFrame Digital";
+const PAGE_TITLE = "Contact — AI Real Estate Photo Editing";
 const PAGE_DESC =
-  "Commission EstateFrame Digital for HDR, twilight, virtual staging, drone, item removal, and cinematic property film. Rush folders under two hours. Complimentary test frame on request.";
+  "Commission AI real estate photo editing with human QC — HDR, virtual staging, twilight, drone, property film. 12h SLA, 2h rush, two free sample frames.";
 
 export const metadata = {
   title: PAGE_TITLE,
@@ -40,25 +40,26 @@ export default function ContactPage() {
     <div className="page-wrapper">
       {/* HERO */}
       <section className="page-hero-banner container">
-        <span className="eyebrow">Commission</span>
+        <span className="eyebrow">Commission · AI real estate photo editing · Human QC</span>
         <h1 className="page-hero-title">
-          Share a frame. Begin a brief.
+          Share a folder. Try two frames free.
         </h1>
         <p className="page-hero-subtitle">
-          Tell the studio what the frame needs to do. A single hero image, a full folder, or an ongoing pipeline —
-          a reply, often within the hour.
+          Send two RAW frames and the preset you shoot with. We return them AI-accelerated and human-verified in
+          12 hours — no card, no subscription. One hero image, a full folder, or an ongoing pipeline for your
+          agency — a reply with a quote and a direction, usually within the hour.
         </p>
       </section>
 
       {/* MAIN */}
-      <section className="contact-main-grid container" data-reveal>
+      <section className="contact-main-grid container" data-reveal suppressHydrationWarning>
         {/* LEFT: DETAILS */}
         <div className="contact-details-column">
           <div className="contact-card-surface">
             <span className="eyebrow">Direct lines</span>
-            <h2 className="contact-section-heading">Reach the studio.</h2>
+            <h2 className="contact-section-heading">Reach the human editor directly.</h2>
             <p className="contact-intro-text">
-              You will not reach a form queue. The editors at the studio answer directly — phone, WhatsApp, or email.
+              No form queue, no routing desk. The editor working your folder answers directly — phone, WhatsApp, or email.
             </p>
 
             <div className="contact-buttons-stack">
@@ -103,44 +104,44 @@ export default function ContactPage() {
               <ul className="perks-list">
                 <li>
                   <CheckCircle2 size={15} />
-                  <span>Count of RAW or bracketed sets</span>
+                  <span>Count of RAW folders and bracketed sets per week</span>
                 </li>
                 <li>
                   <CheckCircle2 size={15} />
-                  <span>Craft needed — HDR, twilight, staging, film</span>
+                  <span>Service needed — HDR, virtual staging, twilight, drone, item removal</span>
                 </li>
                 <li>
                   <CheckCircle2 size={15} />
-                  <span>Preferred delivery window</span>
+                  <span>Your style preset (or 15-20 finished edits for onboarding)</span>
                 </li>
                 <li>
                   <CheckCircle2 size={15} />
-                  <span>Cloud link (Drive, Dropbox, WeTransfer)</span>
+                  <span>Cloud link (Drive, Dropbox, WeTransfer, OneDrive)</span>
                 </li>
               </ul>
             </div>
 
             <div className="contact-workflow-perks">
-              <span className="perks-heading">The studio guarantees</span>
+              <span className="perks-heading">The SLA guarantees</span>
               <ul className="perks-list">
                 <li>
                   <Zap size={15} />
-                  <span>Rush folders returned in under two hours</span>
+                  <span>12-hour photo SLA, 2-hour rush — credit on next folder if we miss</span>
                 </li>
                 <li>
                   <RotateCcw size={15} />
-                  <span>Revisions resolved inside the hour — unbilled</span>
+                  <span>Revisions free within the hour — unlimited passes</span>
                 </li>
                 <li>
                   <Clock size={15} />
-                  <span>Complimentary test frame on request</span>
+                  <span>Two free sample frames on every new account — AI + human verified</span>
                 </li>
               </ul>
             </div>
 
             <div className="contact-security-badge">
               <ShieldCheck size={18} />
-              <span>Every file handled under studio confidentiality — stored encrypted, deleted on request.</span>
+              <span>Files encrypted on studio drives, deleted on request. Your style preset and RAW folders never reused, never republished, never cataloged.</span>
             </div>
           </div>
         </div>

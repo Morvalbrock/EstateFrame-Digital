@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Users, Sparkles, Phone } from "lucide-react";
 
-const PAGE_TITLE = "About the Studio — Boutique Real Estate Post-Production | EstateFrame Digital";
+const PAGE_TITLE = "About — AI + Human Real Estate Photo Editing";
 const PAGE_DESC =
-  "EstateFrame Digital is a boutique post-production studio composing for photographers, agencies, and developers who treat the real estate image as part of the architecture.";
+  "AI real estate photo editing studio with human QC. Style memory per photographer, MLS compliance checklist, 12-hour SLA. USA, Canada, UK, Australia.";
 
 export const metadata = {
   title: PAGE_TITLE,
@@ -16,7 +16,7 @@ export const metadata = {
     siteName: "EstateFrame Digital",
     title: PAGE_TITLE,
     description: PAGE_DESC,
-    images: [{ url: "/images/hdr/hdr-sample-2-after.jpg", width: 1200, height: 800, alt: "Resolved interior representing the EstateFrame Digital studio voice" }],
+    images: [{ url: "/images/hdr/hdr-sample-2-after.jpg", width: 1200, height: 800, alt: "EstateFrame Digital — AI real estate photo editing studio with human verification" }],
     locale: "en_US",
   },
   twitter: {
@@ -37,36 +37,39 @@ export default function AboutPage() {
       <section className="page-hero-banner container">
         <span className="eyebrow">The studio</span>
         <h1 className="page-hero-title">
-          A quiet partner for the frame that has to earn attention.
+          AI real estate photo editing — with the human who stops the mistakes.
         </h1>
         <p className="page-hero-subtitle">
-          EstateFrame Digital is a boutique real estate photo and video editing studio based in India, serving real estate photographers and agencies across the United States, Canada, and Australia. HDR, twilight, virtual staging, item removal, drone finishing, and property film — delivered overnight via cloud link, calibrated to your camera and listing platform.
+          EstateFrame Digital is an AI-powered real estate photo and video editing studio with human quality control, serving real estate photographers and agencies across the USA, Canada, UK, Australia, and New Zealand. HDR, virtual staging, twilight, item removal, drone finishing, property film — AI-accelerated for speed, human-verified for consistency and MLS compliance, SLA-backed with credit if we miss.
         </p>
       </section>
 
       {/* INTRO */}
-      <section className="about-intro-split container" data-reveal>
+      <section className="about-intro-split container" data-reveal suppressHydrationWarning>
         <div className="about-intro-text">
-          <span className="eyebrow">The intent</span>
-          <h2 className="section-title">Resolved frames, composed by hand — not rendered by preset.</h2>
+          <span className="eyebrow">What the studio is</span>
+          <h2 className="section-title">AI efficiency. Human expertise. One accountable partner.</h2>
           <p className="about-body-paragraph">
-            <strong>What we do.</strong> We edit real estate photos and videos — HDR blending, single image finishing, day-to-night conversion, twilight enhancement, virtual staging, item removal, aerial drone finishing, and property film. Every frame is composed by hand against your camera profile. Standard turnaround is 12 to 24 hours for photos and 3 to 5 business days for video. Rush folders ship in under two hours. Revisions are free and returned within the hour.
+            <strong>What we do.</strong> AI real estate photo editing with human verification across eight services: single image editing, HDR blending, day-to-dusk conversion, twilight enhancement, AI virtual staging, real estate video editing, item and object removal, and aerial drone photo editing. AI handles the throughput — blends, swaps, staging, masking — and a human editor locks every frame to your stored style preset and the MLS compliance checklist before sign-off. Standard turnaround: 12 hours photos, 24 hours staging, 3–5 days video. Rush under 2 hours. Revisions free within the hour.
           </p>
           <p className="about-body-paragraph">
-            <strong>Who we serve.</strong> US real estate photographers shipping MLS folders for Compass, Coldwell Banker, Keller Williams, and RE/MAX; Canadian photographers on Realtor.ca workflows with Royal LePage, Century 21, Sutton; Australian photographers delivering to realestate.com.au and Domain.com.au for Ray White, LJ Hooker, Harcourts, Belle Property. Also serving independent listing photographers, marketing teams, and property developers across the UK, New Zealand, and worldwide.
+            <strong>Who we serve.</strong> US real estate photographers shipping MLS folders for Compass, Coldwell Banker, Keller Williams, RE/MAX, Sotheby&apos;s International Realty, and Berkshire Hathaway HomeServices; Canadian photographers on Realtor.ca workflows with Royal LePage, Century 21, Sutton, and Chestnut Park; Australian photographers delivering to realestate.com.au and Domain.com.au for Ray White, LJ Hooker, Harcourts, Belle Property, and McGrath; UK and New Zealand photographers via cloud link. Independent listing photographers, marketing teams, and property developers are all welcome.
           </p>
           <p className="about-body-paragraph">
-            <strong>The time-zone advantage.</strong> We work from India (IST, UTC+5:30). You ship files at end-of-shoot on US Pacific, US Eastern, or Australian Eastern time; our daytime is your overnight. Hero frames back before the next morning for US and Canadian photographers; back in time for afternoon follow-ups for Australian photographers. No night-shift photographer editing their own folder at 2am.
+            <strong>Why AI + human beats AI-only.</strong> AI editing tools are fast, but they drift across a 40-image shoot, flatten every photographer into the same look, and will remove permanent fixtures that your MLS board treats as misrepresentation. Our workflow stores your style preset per photographer, re-applies it on every folder, and routes every frame past a human editor and an MLS compliance checklist. Result: AI-fast turnaround without the AI mistakes that get you delisted.
           </p>
           <p className="about-body-paragraph">
-            <strong>How we work.</strong> You share RAW files through any cloud link — Drive, Dropbox, WeTransfer, OneDrive. We download, calibrate white balance to your camera, compose exposure, correct line, resolve tone, and return the folder in print-ready and MLS-ready formats, named to your convention. No portal to log into. No filter stack. Just the frame, composed.
+            <strong>The time-zone advantage.</strong> We work from India (IST, UTC+5:30). Our workday overlaps your overnight — files shipped at end-of-shoot on US Pacific, US Eastern, UK, or Australian Eastern time come back as finished folders before your next morning. No night-shift editing your own folder at 2am.
+          </p>
+          <p className="about-body-paragraph">
+            <strong>How we work.</strong> Share RAW files through any cloud link — Drive, Dropbox, WeTransfer, OneDrive, pCloud, MASV. AI pre-passes the folder, a human editor verifies against your style preset and the MLS compliance checklist, and we return print and MLS-ready exports named to your convention. No portal to log into. No new tool to learn. Just the folder, delivered inside the SLA.
           </p>
           <div className="about-pillar-tags">
-            <span className="about-tag">US · CA · AU</span>
-            <span className="about-tag">Overnight delivery</span>
-            <span className="about-tag">MLS · Realtor.ca · realestate.com.au</span>
-            <span className="about-tag">Free revisions</span>
-            <span className="about-tag">Natural light · honest tone</span>
+            <span className="about-tag">USA · Canada · UK · Australia</span>
+            <span className="about-tag">AI + human workflow</span>
+            <span className="about-tag">Style memory per photographer</span>
+            <span className="about-tag">MLS compliance checklist</span>
+            <span className="about-tag">12h / 24h SLA with credits</span>
           </div>
         </div>
 
@@ -74,7 +77,7 @@ export default function AboutPage() {
           <div className="about-image-frame">
             <Image
               src={aboutHeroImg}
-              alt="Resolved interior with balanced window pull and honest architectural tone"
+              alt="AI real estate photo editing — human-verified interior with balanced window pull and honest tone"
               fill
               sizes="(max-width: 900px) 100vw, 50vw"
               className="object-cover"
@@ -85,42 +88,42 @@ export default function AboutPage() {
       </section>
 
       {/* CAPABILITIES */}
-      <section className="about-capabilities-strip" data-reveal>
+      <section className="about-capabilities-strip" data-reveal suppressHydrationWarning>
         <div className="container">
           <div className="section-header-block">
             <div>
               <span className="eyebrow">Capabilities</span>
-              <h2 className="section-title">The full arc — stills, space, motion.</h2>
+              <h2 className="section-title">AI real estate editing — stills, space, motion.</h2>
             </div>
             <p className="section-lead-paragraph">
-              Three disciplines, one hand. The output is consistent whether it ships as a hero image, a vertical
-              reel, or a floor plan.
+              Three capability areas, one accountable workflow. The AI pre-pass runs the heavy lifting; a human editor
+              verifies every output against your style preset and MLS compliance before delivery.
             </p>
           </div>
 
           <div className="capabilities-triad-grid">
             <div className="capability-column-card">
-              <h3>Still composition</h3>
+              <h3>AI still composition</h3>
               <p>
-                Bracketed exposure blending, window pulls, perspective correction, honest white balance, and
-                quiet item removal — for interiors and exteriors that read true to the room.
+                AI bracket blending, window pulls, perspective correction, and item removal — human-verified for
+                straight verticals, honest white balance, and MLS-compliant retouching.
               </p>
               <ul className="capability-bullet-list">
                 <li>HDR exposure blending</li>
-                <li>Flash and ambient integration</li>
-                <li>Line, keystone, and crop</li>
+                <li>Flambient flash + ambient integration</li>
+                <li>Verticals, keystone, MLS-safe retouching</li>
               </ul>
             </div>
 
             <div className="capability-column-card">
-              <h3>Space &amp; twilight</h3>
+              <h3>AI virtual staging &amp; twilight</h3>
               <p>
-                Turning empty, unfinished, or daytime scenes into high-converting marketing frames through the
-                careful hand of digital composition.
+                AI virtual staging, AI sky swaps, and AI day-to-dusk conversions — human-verified for scale, shadow
+                direction, and furniture style that matches the room, not a stock library.
               </p>
               <ul className="capability-bullet-list">
-                <li>Day-to-twilight conversion</li>
-                <li>Virtual staging, photo-real</li>
+                <li>AI day-to-twilight conversion</li>
+                <li>AI virtual staging, photo-real QC</li>
                 <li>Floor plans in 2D and 3D</li>
               </ul>
             </div>
@@ -128,8 +131,8 @@ export default function AboutPage() {
             <div className="capability-column-card">
               <h3>Property film</h3>
               <p>
-                Gimbal, drone, and agent footage composed into cinematic walkthroughs that hold attention across
-                a website, a social feed, and a client inbox.
+                Gimbal, drone, and agent footage edited into cinematic walkthroughs with AI-assisted color grading and
+                human-verified pacing — horizontal 4K and vertical 9:16 delivered from one brief.
               </p>
               <ul className="capability-bullet-list">
                 <li>Grade matched to the stills</li>
@@ -142,13 +145,13 @@ export default function AboutPage() {
       </section>
 
       {/* WORKFLOW */}
-      <section className="about-workflow-section container" data-reveal>
+      <section className="about-workflow-section container" data-reveal suppressHydrationWarning>
         <div className="workflow-split-layout">
           <div className="workflow-image-container">
             <div className="workflow-photo-frame">
               <Image
                 src={aboutWorkflowImg}
-                alt="Interior frame with calibrated contrast and composed line"
+                alt="AI + human real estate photo editing workflow — calibrated interior with MLS-safe composition"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
                 className="object-cover"
@@ -157,10 +160,11 @@ export default function AboutPage() {
           </div>
 
           <div className="workflow-steps-column">
-            <span className="eyebrow">The method</span>
-            <h2 className="section-title">A workflow that reads the same every time.</h2>
+            <span className="eyebrow">The workflow</span>
+            <h2 className="section-title">AI pre-pass. Human QC. Four-stage sign-off.</h2>
             <p className="about-body-paragraph">
-              Every frame and every floor plan clears a four-stage check before it leaves the studio.
+              Every real estate photo folder clears four stages before it leaves the studio — AI handles throughput, a
+              human editor signs off every stage against your style and MLS compliance.
             </p>
 
             <div className="workflow-checklist">
@@ -169,8 +173,8 @@ export default function AboutPage() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>Pre-flight</strong>
-                  <p>Bracket alignment, dynamic range reading, and a close read of the photographer&apos;s notes.</p>
+                  <strong>AI pre-pass</strong>
+                  <p>HDR blend, sky swap, staging, or item removal run by AI against bracket alignment and dynamic range — in minutes, not hours.</p>
                 </div>
               </div>
 
@@ -179,8 +183,8 @@ export default function AboutPage() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>Color calibration</strong>
-                  <p>White balance harmonised across hallways, living rooms, and exteriors — the room reads as one.</p>
+                  <strong>Style preset lock</strong>
+                  <p>Your stored WB, contrast, sky, and sharpening preset re-applied so every frame in the folder reads like your other work.</p>
                 </div>
               </div>
 
@@ -189,8 +193,8 @@ export default function AboutPage() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>Line and perspective</strong>
-                  <p>Verticals pulled true, keystone resolved, barrel distortion cleared — the architecture holds.</p>
+                  <strong>MLS compliance checklist</strong>
+                  <p>A human editor checks every frame against the published rules — no removed permanent fixtures, no banned sky swaps, no misrepresented furnishings.</p>
                 </div>
               </div>
 
@@ -199,8 +203,8 @@ export default function AboutPage() {
                   <CheckCircle2 size={18} />
                 </div>
                 <div>
-                  <strong>Final review and export</strong>
-                  <p>300 DPI print masters alongside web and MLS variants, named to your convention.</p>
+                  <strong>Sign-off and SLA delivery</strong>
+                  <p>300 DPI print masters plus web and MLS-ready variants, named to your convention, delivered inside the 12h / 24h SLA — credit if we miss.</p>
                 </div>
               </div>
             </div>
@@ -209,54 +213,55 @@ export default function AboutPage() {
       </section>
 
       {/* COLLABORATION */}
-      <section className="about-collaboration-section" data-reveal>
+      <section className="about-collaboration-section" data-reveal suppressHydrationWarning>
         <div className="container">
           <div className="section-header-block text-center-block">
-            <span className="eyebrow">Why the studio works</span>
-            <h2 className="section-title">A disciplined partner — quiet, dependable, calibrated.</h2>
+            <span className="eyebrow">Why photographers switch</span>
+            <h2 className="section-title">AI-fast. Human-accountable. SLA-backed.</h2>
             <p className="section-subtitle centered">
-              The studio exists to disappear into your workflow.
+              A studio that uses AI as a tool — not a replacement — and takes responsibility for every frame it ships.
             </p>
           </div>
 
           <div className="collaboration-quad-grid">
             <div className="collab-feature-card">
               <ShieldCheck size={24} style={{ color: "var(--bronze)", marginBottom: "18px" }} />
-              <h3>Consistent voice</h3>
-              <p>Your color temperature, contrast, and sky style are stored and applied uniformly across every folder.</p>
+              <h3>Style memory per photographer</h3>
+              <p>Your WB, contrast, sky, sharpening, and crop preferences stored and re-applied across every folder. No AI drift mid-shoot.</p>
             </div>
 
             <div className="collab-feature-card">
               <Clock size={24} style={{ color: "var(--bronze)", marginBottom: "18px" }} />
-              <h3>Dependable return</h3>
-              <p>Clear turnarounds, honoured — so listings launch on the schedule your calendar already assumes.</p>
+              <h3>SLA with credits</h3>
+              <p>12h photo SLA. 24h staging SLA. 2h rush. Miss the window, your next folder is credited — no dispute.</p>
             </div>
 
             <div className="collab-feature-card">
               <Users size={24} style={{ color: "var(--bronze)", marginBottom: "18px" }} />
-              <h3>Direct studio line</h3>
-              <p>Phone and WhatsApp straight to the studio — urgent notes answered by the people doing the edit.</p>
+              <h3>Direct line to the editor</h3>
+              <p>WhatsApp or phone straight to the human editor working your folder — urgent notes answered by the person doing the edit, not a ticket queue.</p>
             </div>
 
             <div className="collab-feature-card">
               <Sparkles size={24} style={{ color: "var(--bronze)", marginBottom: "18px" }} />
-              <h3>Scale, held steady</h3>
-              <p>From a single hero frame to continuous weekly volume — the discipline doesn&apos;t loosen at the thousandth image.</p>
+              <h3>MLS compliance, built in</h3>
+              <p>Every frame checked against published MLS rules before sign-off — stays off the delisting line, every time.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="final-cta-section" data-reveal>
+      <section className="final-cta-section" data-reveal suppressHydrationWarning>
         <div className="container final-cta-wrapper">
           <div className="final-cta-content">
             <span className="eyebrow">Begin</span>
             <h2 className="section-title text-light">
-              Ready to compose the next folder together?
+              Ready to swap AI-only editing for AI + human verification?
             </h2>
             <p className="final-cta-text">
-              Share a brief or a RAW frame. The studio replies with a direction, often within the hour.
+              Share a brief, a RAW folder, or two sample frames. The studio replies with a direction and a quote,
+              usually within the hour.
             </p>
           </div>
 

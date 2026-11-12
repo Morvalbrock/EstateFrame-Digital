@@ -3,9 +3,9 @@ import { ArrowRight, Phone } from "lucide-react";
 import { PortfolioGallery } from "@/components/portfolio-gallery";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 
-const PAGE_TITLE = "Real Estate Editing Portfolio — HDR, Twilight, Staging | EstateFrame Digital";
+const PAGE_TITLE = "Portfolio — AI Real Estate Photo Editing";
 const PAGE_DESC =
-  "A quiet catalog of composed frames across HDR interiors, twilight exteriors, virtual staging, item removal, and property film. Selected work from EstateFrame Digital.";
+  "Selected real estate photo editing work — AI-accelerated, human-verified. HDR interiors, twilight exteriors, AI virtual staging, item removal, property film.";
 
 export const metadata = {
   title: PAGE_TITLE,
@@ -33,24 +33,25 @@ export default function PortfolioPage() {
     <div className="page-wrapper">
       {/* HERO */}
       <section className="page-hero-banner container">
-        <span className="eyebrow">Selected work</span>
+        <span className="eyebrow">Selected work · AI-accelerated · Human-verified</span>
         <h1 className="page-hero-title">
-          A quiet catalog of composed frames.
+          AI real estate photo editing, by the folder.
         </h1>
         <p className="page-hero-subtitle">
-          A rotating cut from across the studio&apos;s disciplines. Filter by craft, drag the comparison to see the
-          before, and open any card for a closer look at the resolved frame.
+          A rotating cut of recent folders across HDR blending, AI virtual staging, day-to-dusk, twilight, item
+          removal, and drone finishing. Filter by service, drag the handle to see the RAW, and open any frame to read
+          what the AI pre-pass handled and what human QC verified.
         </p>
       </section>
 
       {/* COMPARISON SPOTLIGHT */}
-      <section className="portfolio-transformation-spotlight container" data-reveal>
+      <section className="portfolio-transformation-spotlight container" data-reveal suppressHydrationWarning>
         <div className="spotlight-header">
           <span className="eyebrow">Compare</span>
-          <h2 className="section-title">Drag the handle. Look at the restraint.</h2>
+          <h2 className="section-title">RAW on the left. AI-blended, human-verified on the right.</h2>
           <p className="section-lead-paragraph">
-            The studio does not use filters or presets. Each frame is composed to the architecture of the room
-            it lives in — exposure, line, light.
+            Every frame runs through the same workflow — AI pre-pass for speed, a human editor for style preset
+            lock and MLS compliance. No generic filter stack. No preset drift across the folder.
           </p>
         </div>
 
@@ -60,14 +61,14 @@ export default function PortfolioPage() {
       </section>
 
       {/* GALLERY */}
-      <section className="portfolio-gallery-section container" data-reveal>
+      <section className="portfolio-gallery-section container" data-reveal suppressHydrationWarning>
         <div className="gallery-header-row">
           <div>
-            <span className="eyebrow">By craft</span>
+            <span className="eyebrow">By service</span>
             <h2 className="section-title">The catalog.</h2>
           </div>
           <p className="gallery-disclaimer-note">
-            Representative studio work — individual client frames available under commission brief.
+            Representative studio work — named client references available on commission brief.
           </p>
         </div>
 
@@ -75,15 +76,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA */}
-      <section className="final-cta-section" data-reveal>
+      <section className="final-cta-section" data-reveal suppressHydrationWarning>
         <div className="container final-cta-wrapper">
           <div className="final-cta-content">
             <span className="eyebrow">Begin</span>
             <h2 className="section-title text-light">
-              Have a frame you want the studio to answer?
+              Have a folder you want to put on the AI + human workflow?
             </h2>
             <p className="final-cta-text">
-              Send a RAW or a reference. The studio will return a direction within the hour.
+              Send two RAW frames and the preset you shoot with. The studio returns them AI-accelerated and
+              human-verified in 12 hours — no card, no subscription.
             </p>
           </div>
 

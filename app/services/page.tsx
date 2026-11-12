@@ -11,9 +11,9 @@ import {
   stagingComparisons,
 } from "@/data/comparisons";
 
-const PAGE_TITLE = "Real Estate Photo Editing Services — EstateFrame Digital";
+const PAGE_TITLE = "AI Real Estate Photo Editing Services | EstateFrame";
 const PAGE_DESC =
-  "Boutique real estate photo editing services — single-frame, HDR blending, day-to-night, twilight, virtual staging, property film, item removal, aerial drone. Composed with editorial discipline. Commission a test frame →";
+  "AI real estate photo editing services with human QC — HDR, virtual staging, twilight, drone, item removal, property film. MLS-compliant. 12-hour SLA.";
 
 export const metadata = {
   title: PAGE_TITLE,
@@ -69,21 +69,22 @@ export default function ServicesPage() {
       />
       {/* HERO */}
       <section className="page-hero-banner container">
-        <span className="eyebrow">The craft</span>
+        <span className="eyebrow">AI real estate photo editing services</span>
         <h1 className="page-hero-title">
-          Eight disciplines, one studio.
+          Eight AI-powered editing services. One human sign-off.
         </h1>
         <p className="page-hero-subtitle">
-          From the single resolved frame to high-bracket HDR interiors, twilight exteriors, virtual staging,
-          item removal, and cinematic property film — the complete studio, composed by hand.
+          AI real estate photo editing for photographers and agencies — HDR blending, single image editing, day-to-dusk,
+          twilight, AI virtual staging, property film, item removal, aerial drone. Every service runs through the same
+          workflow: AI pre-pass for speed, human editor for style-memory and MLS compliance, SLA-backed delivery.
         </p>
 
         <div className="hero-value-pills" style={{ marginTop: "40px" }}>
-          <span className="value-pill"><CheckCircle2 size={14} /> Single Frame</span>
+          <span className="value-pill"><CheckCircle2 size={14} /> Single Image Editing</span>
           <span className="value-pill"><CheckCircle2 size={14} /> HDR Blending</span>
-          <span className="value-pill"><CheckCircle2 size={14} /> Day to Night</span>
+          <span className="value-pill"><CheckCircle2 size={14} /> Day to Dusk</span>
           <span className="value-pill"><CheckCircle2 size={14} /> Twilight</span>
-          <span className="value-pill"><CheckCircle2 size={14} /> Virtual Staging</span>
+          <span className="value-pill"><CheckCircle2 size={14} /> AI Virtual Staging</span>
           <span className="value-pill"><CheckCircle2 size={14} /> Property Films</span>
           <span className="value-pill"><CheckCircle2 size={14} /> Item Removal</span>
           <span className="value-pill"><CheckCircle2 size={14} /> Aerial Drone</span>
@@ -108,13 +109,13 @@ export default function ServicesPage() {
         >
           <div style={{ display: "flex", gap: "28px", alignItems: "center", flexWrap: "wrap" }}>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "10px", fontSize: "12px", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-              <strong style={{ color: "var(--bronze)", fontWeight: 500 }}>Rush delivery</strong> — under 2 hours
+              <strong style={{ color: "var(--bronze)", fontWeight: 500 }}>SLA</strong> — 12h / 24h with credit
             </span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "10px", fontSize: "12px", letterSpacing: "0.1em", textTransform: "uppercase" }}>
               <strong style={{ color: "var(--bronze)", fontWeight: 500 }}>Revisions</strong> — free, within an hour
             </span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: "10px", fontSize: "12px", letterSpacing: "0.1em", textTransform: "uppercase" }}>
-              <strong style={{ color: "var(--bronze)", fontWeight: 500 }}>Test frame</strong> — on the house
+              <strong style={{ color: "var(--bronze)", fontWeight: 500 }}>MLS QC</strong> — on every frame
             </span>
           </div>
           <Link href="/contact" className="button button-accent" style={{ padding: "11px 22px" }}>
@@ -135,6 +136,7 @@ export default function ServicesPage() {
               id={service.id}
               className={`service-detail-section ${isEven ? "reverse-layout" : ""}`}
               data-reveal
+              suppressHydrationWarning
             >
               {service.id === "hdr-photo-editing" && (
                 <div className="hdr-service-top-strip">
@@ -143,7 +145,7 @@ export default function ServicesPage() {
                       <Sparkles size={13} /> The HDR Studio
                     </span>
                     <span className="hdr-top-subtext">
-                      Six real bracketed sets — raw to resolved. Dragable, not rendered.
+                      Six real bracketed sets — RAW to AI-blended to human-verified.
                     </span>
                   </div>
                   <Link href="/HDR" className="button button-accent hdr-top-prominent-btn">
@@ -213,7 +215,7 @@ export default function ServicesPage() {
                 <p className="service-extended-text">{service.fullDescription}</p>
 
                 <div className="service-benefits-group">
-                  <span className="benefits-group-title">The craft includes</span>
+                  <span className="benefits-group-title">What&apos;s included</span>
                   <ul className="benefits-checklist">
                     {service.benefits.map((benefit) => (
                       <li key={benefit}>
@@ -241,16 +243,16 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="final-cta-section" data-reveal>
+      <section className="final-cta-section" data-reveal suppressHydrationWarning>
         <div className="container final-cta-wrapper">
           <div className="final-cta-content">
             <span className="eyebrow">Begin</span>
             <h2 className="section-title text-light">
-              Ready to compose the next folder?
+              Ready to put the AI + human workflow on your next folder?
             </h2>
             <p className="final-cta-text">
-              Share a brief, a RAW set, or the kind of frame you want the studio to answer. A direction returns
-              within the hour.
+              Share a brief, a RAW set, or two sample frames. A direction and a quote return within the hour — and
+              two edits run free on the house.
             </p>
           </div>
 

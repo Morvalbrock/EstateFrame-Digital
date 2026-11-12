@@ -11,35 +11,65 @@ import {
 } from "lucide-react";
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
+import { faqItems } from "@/data/faq";
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { FAQAccordion } from "@/components/faq-accordion";
 import { PortfolioGallery } from "@/components/portfolio-gallery";
+import { FreeTrialForm } from "@/components/free-trial-form";
 
 const heroImage = "/videos/posters/real-estate-promo-poster.jpg";
 const trustImage = "/images/hdr/hdr-sample-4-after.jpg";
 
+const faqPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: { "@type": "Answer", text: item.answer },
+  })),
+};
+
 export default function HomePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
+      />
+
+      {/* FREE-TRIAL RIBBON */}
+      <aside className="trial-ribbon" aria-label="Free trial offer">
+        <div className="container trial-ribbon-inner">
+          <span className="trial-ribbon-dot" aria-hidden="true" />
+          <p className="trial-ribbon-copy">
+            <strong>Try the studio free.</strong> Two RAW frames — AI-accelerated, human-verified — returned in 12 hours. No card, no subscription.
+          </p>
+          <a href="#free-trial" className="trial-ribbon-link">
+            Claim two free edits <ArrowRight size={13} />
+          </a>
+        </div>
+      </aside>
+
       {/* HERO */}
       <section className="hero-section container">
         <div className="hero-headline-block">
-          <span className="eyebrow">Editorial post-production · Est. for real estate</span>
+          <span className="eyebrow">AI real estate photo editing · Human-verified · USA · Canada · UK · Australia</span>
           <h1 className="hero-main-title">
-            <span>The frame makes</span><br />
-            <span>the <em>property.</em></span>
+            <span>Every frame in</span><br />
+            <span>your <em>style.</em> Every shoot, every time.</span>
           </h1>
         </div>
 
         <div className="hero-split-grid">
           <div className="hero-content-column">
             <p className="hero-support-copy">
-              EstateFrame Digital is a real estate photo and video editing studio for US, Canadian, and Australian photographers, agencies, and brokerages. We blend HDR brackets, convert daytime exteriors to twilight, virtually stage empty rooms, retouch drone captures, remove items, and cut cinematic property films — all composed by hand, calibrated to your camera profile. Your overnight is our workday: send files at end-of-shoot, get the folder back before your next morning. Rush turnaround under two hours. Free revisions within the hour.
+              EstateFrame Digital is an AI real estate photo editing service with human quality control — built for real estate photographers and agencies across the USA, Canada, UK, and Australia. Our AI pre-pass handles HDR blends, sky swaps, virtual staging, item removal, drone finishing, and day-to-dusk conversions at speed. A human editor then locks consistency to your stored style preset, checks every frame against the MLS compliance checklist, and signs it off. Guaranteed 12-hour folders. 24-hour SLA with credit if we miss. Rush under two hours. Free revisions within the hour.
             </p>
 
             <div className="hero-cta-group">
-              <Link className="button button-accent" href="/contact">
-                Commission Studio <ArrowRight size={14} />
+              <Link className="button button-accent" href="#free-trial">
+                Try Two Free Edits <ArrowRight size={14} />
               </Link>
               <Link className="button button-secondary" href="/portfolio">
                 See the Portfolio <ArrowDownRight size={14} />
@@ -48,13 +78,13 @@ export default function HomePage() {
 
             <div className="hero-value-pills">
               <span className="value-pill">
-                <Zap size={14} /> Rush delivery within two hours
+                <Zap size={14} /> Style memory per photographer
               </span>
               <span className="value-pill">
-                <RotateCcw size={14} /> Revisions returned in under an hour
+                <RotateCcw size={14} /> MLS compliance checklist on every frame
               </span>
               <span className="value-pill">
-                <Clock size={14} /> Complimentary test frame on request
+                <Clock size={14} /> 12h / 24h SLA — credit if we miss
               </span>
             </div>
           </div>
@@ -74,30 +104,74 @@ export default function HomePage() {
               </video>
               <div className="hero-visual-tag">
                 <Sparkles size={14} />
-                <span>Exposure composed. Twilight considered. Nothing hurried.</span>
+                <span>AI speed. Human-locked consistency. MLS-compliant.</span>
               </div>
             </div>
             <div className="hero-scroll-indicator">
-              <span>Scroll — the studio</span>
+              <span>Scroll — the workflow</span>
               <span aria-hidden="true">↓</span>
             </div>
           </div>
         </div>
       </section>
 
+      {/* FREE TRIAL */}
+      <section className="free-trial-section" id="free-trial" data-reveal suppressHydrationWarning>
+        <div className="container free-trial-layout">
+          <div className="free-trial-copy-column">
+            <span className="eyebrow">Try the studio — on the house</span>
+            <h2 className="section-title text-light">
+              <span>Two frames. AI-accelerated.</span><br />
+              <span>Human-verified in <em>12 hours.</em></span>
+            </h2>
+            <p className="free-trial-lead-text">
+              Judge the output before you commission. Send two RAW frames and your usual preset — AI handles the heavy lifting, a human editor verifies the result against your style and the MLS compliance checklist. No card, no subscription. If they belong in your listing, we&apos;ll quote your weekly folder in one line.
+            </p>
+
+            <ul className="free-trial-benefits">
+              <li>
+                <span className="benefit-mark" aria-hidden="true">01</span>
+                <div>
+                  <strong>Any service</strong>
+                  <span>HDR blend, day-to-dusk, virtual staging, item removal, drone finish — pick one craft.</span>
+                </div>
+              </li>
+              <li>
+                <span className="benefit-mark" aria-hidden="true">02</span>
+                <div>
+                  <strong>AI-assisted. Human-verified.</strong>
+                  <span>AI handles the pre-pass; a human editor locks consistency, straight verticals, and MLS compliance.</span>
+                </div>
+              </li>
+              <li>
+                <span className="benefit-mark" aria-hidden="true">03</span>
+                <div>
+                  <strong>Back in 12 hours — SLA-backed</strong>
+                  <span>Miss the window, get credit on your next folder. Revisions inside the hour.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div className="free-trial-form-column">
+            <FreeTrialForm />
+          </div>
+        </div>
+      </section>
+
       {/* TRUST & AUDIENCES */}
-      <section className="trust-strip-section" data-reveal>
+      <section className="trust-strip-section" data-reveal suppressHydrationWarning>
         <div className="container trust-split-layout">
           <div className="trust-narrative-copy">
-            <span className="eyebrow">A quiet partner · US · Canada · Australia</span>
-            <h2 className="section-title">A studio built for the way property is sold now.</h2>
+            <span className="eyebrow">AI-powered editing · Human QC · USA · Canada · UK · Australia</span>
+            <h2 className="section-title">Built for the AI era — without the AI mistakes.</h2>
             <p>
-              We edit for real estate photographers and agencies across the United States, Canada, and Australia — MLS-ready folders for Compass, Coldwell Banker, Keller Williams, and RE/MAX; Realtor.ca-ready exports for Royal LePage, Century 21, and Sutton; realestate.com.au and Domain.com.au-ready frames for Ray White, LJ Hooker, Harcourts, and Belle Property. Eight disciplines, one studio voice, from a single luxury hero frame to a weekly volume pipeline.
+              Pure AI editing drifts across a 40-image shoot, crops out permanent fixtures that break MLS rules, and flattens every photographer into the same look. <Link href="/about">EstateFrame Digital</Link> uses AI for what it&apos;s good at — speed on HDR blends, sky swaps, virtual staging, and item removal — then a human editor locks your stored style preset across the folder and runs every frame through an MLS compliance checklist. The result: AI-fast turnaround on real estate photo editing for Compass, Coldwell Banker, Keller Williams, RE/MAX, Royal LePage, Century 21, Ray White, LJ Hooker, Harcourts, and independent photographers across USA, Canada, UK, Australia, and New Zealand.
             </p>
             <div className="trust-photo-card">
               <Image
                 src={trustImage}
-                alt="Composed interior with resolved window pull and architectural tone"
+                alt="AI real estate photo editing output with human-verified window pull and MLS-compliant frame"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
                 className="object-cover"
@@ -107,34 +181,34 @@ export default function HomePage() {
 
           <div className="trust-audiences-stack">
             <div className="trust-audience-item">
-              <h3>Real-estate photographers</h3>
+              <h3>Real estate photographers</h3>
               <p>
-                High-volume bracket blending, window pulling, and tonal calibration — composed to your camera profile
-                so you shoot more and finish less.
+                High-volume HDR blending, window pulls, and style-consistent output — AI handles throughput, a human
+                editor keeps your look identical from the first folder to the hundredth.
               </p>
             </div>
 
             <div className="trust-audience-item">
-              <h3>Property agencies</h3>
+              <h3>Property agencies &amp; brokerages</h3>
               <p>
-                A consistent editorial voice across every residential and commercial listing — the quiet work that
-                separates a brand from a template.
+                MLS-compliant frames across every residential and commercial listing — no removed fixtures, no banned
+                sky swaps, no drift between agents. One brand voice, locked.
               </p>
             </div>
 
             <div className="trust-audience-item">
               <h3>Marketing leads</h3>
               <p>
-                Publish-ready staging, floor plans, and vertical property films — paced for the channels your buyers
-                actually scroll.
+                AI virtual staging, floor plans, and vertical property films verified by human QC before they publish —
+                paced for the channels your buyers actually scroll.
               </p>
             </div>
 
             <div className="trust-audience-item">
               <h3>Developers</h3>
               <p>
-                Architectural renderings, furnished spatial compositions, and twilight conversions for pre-sale
-                launches that need to look finished months before they are.
+                AI-accelerated day-to-dusk conversions, furnished spatial compositions, and twilight hero frames for
+                pre-sale launches that need to look finished months before they are.
               </p>
             </div>
           </div>
@@ -142,22 +216,22 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES */}
-      <section className="services-overview-section container" id="services" data-reveal>
+      <section className="services-overview-section container" id="services" data-reveal suppressHydrationWarning>
         <div className="section-header-block">
           <div>
-            <span className="eyebrow">The craft</span>
+            <span className="eyebrow">The services</span>
             <h2 className="section-title">
-              <span>Eight disciplines,</span><br />
-              <span>one considered hand.</span>
+              <span>Eight real estate editing services.</span><br />
+              <span>AI speed. One consistent voice.</span>
             </h2>
           </div>
           <p className="section-lead-paragraph">
-            From the single resolved frame to immersive property films, each service is handled by an editor who
-            treats every image as if it were going to print.
+            From single-image corrections to AI virtual staging and cinematic property film — every service runs through
+            the same AI pre-pass, the same human QC, and the same MLS compliance checklist before it ships.
           </p>
         </div>
 
-        <div className="services-bento-grid" data-reveal data-reveal-stagger>
+        <div className="services-bento-grid" data-reveal data-reveal-stagger suppressHydrationWarning>
           {services.map((service, index) => (
             <article
               key={service.id}
@@ -181,7 +255,7 @@ export default function HomePage() {
                     className="service-explore-action"
                     aria-label={`Open ${service.title}`}
                   >
-                    <span>Study the craft</span>
+                    <span>See the workflow</span>
                     <ArrowRight size={13} />
                   </Link>
                   {service.id === "hdr-photo-editing" && (
@@ -202,28 +276,29 @@ export default function HomePage() {
       </section>
 
       {/* BEFORE / AFTER */}
-      <section className="transformation-section" id="comparison" data-reveal>
+      <section className="transformation-section" id="comparison" data-reveal suppressHydrationWarning>
         <div className="container transformation-grid">
           <div className="transformation-copy-column">
             <span className="eyebrow">Before / After</span>
-            <h2 className="section-title text-light">The difference is in the restraint.</h2>
+            <h2 className="section-title text-light">The difference AI-only editing can&apos;t make.</h2>
             <p className="transformation-lead-text">
-              Drag the handle. You&apos;re seeing the untouched capture against the finished frame — the same
-              composition, calibrated for tone, line, and light. No filter stack. No preset.
+              Drag the handle. You&apos;re seeing the untouched RAW against a frame that ran through our AI pre-pass and
+              a human verification pass — straight verticals, honest window pull, MLS-safe composition, locked to your
+              style preset. No halo. No inconsistent drift across the folder.
             </p>
 
             <div className="transformation-perks-list">
               <div className="transformation-perk-item">
                 <span className="perk-bullet" />
-                <span>Exposure composed across window and interior, without halo</span>
+                <span>HDR window pull across the folder — same exposure, every frame</span>
               </div>
               <div className="transformation-perk-item">
                 <span className="perk-bullet" />
-                <span>Dusk skies and warm architectural light, held in balance</span>
+                <span>MLS-compliant sky, facade, and dusk lighting — no banned swaps</span>
               </div>
               <div className="transformation-perk-item">
                 <span className="perk-bullet" />
-                <span>Virtually furnished rooms that read as photographed, not rendered</span>
+                <span>AI virtual staging that passes human QC — shadows, scale, style verified</span>
               </div>
             </div>
 
@@ -244,15 +319,15 @@ export default function HomePage() {
       </section>
 
       {/* PORTFOLIO */}
-      <section className="featured-portfolio-section container" id="portfolio" data-reveal>
+      <section className="featured-portfolio-section container" id="portfolio" data-reveal suppressHydrationWarning>
         <div className="section-header-block">
           <div>
             <span className="eyebrow">Selected work</span>
-            <h2 className="section-title">A quiet catalog of composed frames.</h2>
+            <h2 className="section-title">Real estate frames, AI-accelerated, human-verified.</h2>
           </div>
           <p className="section-lead-paragraph">
-            A rotating cut of recent studio work — interiors, exteriors, staging, and film. Press any frame to open
-            the before and after.
+            A rotating cut of recent folders — interiors, exteriors, virtual staging, twilight conversions, and property
+            film. Press any frame to open the RAW-to-delivered comparison.
           </p>
         </div>
 
@@ -260,14 +335,16 @@ export default function HomePage() {
       </section>
 
       {/* WHY US */}
-      <section className="why-us-section" data-reveal>
+      <section className="why-us-section" data-reveal suppressHydrationWarning>
         <div className="container why-us-split-layout">
           <div className="why-us-lead-box">
-            <span className="eyebrow">Working with the studio</span>
-            <h2 className="section-title">A disciplined pipeline. Built around yours.</h2>
+            <span className="eyebrow">Why AI + human beats AI-only</span>
+            <h2 className="section-title">AI editing without the AI mistakes.</h2>
             <p>
-              The studio exists to disappear into your workflow — predictable file naming, a known turnaround,
-              edits returned in the formats your MLS, website, and social already expect. The quiet work is the point.
+              Pure AI editing tools flatten every photographer into the same look, drift mid-shoot, and will cheerfully
+              remove a ceiling fan or window grille that your local MLS lists as a permanent fixture. Our workflow stores
+              your style preset per photographer, re-applies it on every folder, and routes every frame past a human
+              editor and an MLS compliance checklist before delivery. Predictable file names. Guaranteed SLA. Credit if we miss.
             </p>
             <Link href="/contact" className="button button-primary">
               Discuss a Pipeline <ArrowRight size={14} />
@@ -276,34 +353,34 @@ export default function HomePage() {
 
           <div className="why-us-benefits-matrix">
             <div className="why-benefit-item">
-              <h3 className="why-benefit-title">Two-hour rush delivery</h3>
+              <h3 className="why-benefit-title">Style memory per photographer</h3>
               <p className="why-benefit-text">
-                When a listing goes live tonight, the studio can turn the hero folder in under 120 minutes — no
-                surcharge, no explanation required.
+                We onboard with 15–20 of your finished edits and store your look — WB, contrast, sky, sharpening, crop.
+                Every folder after that ships in your style, not the generic Zillow look.
               </p>
             </div>
 
             <div className="why-benefit-item">
-              <h3 className="why-benefit-title">Revisions, inside the hour</h3>
+              <h3 className="why-benefit-title">MLS compliance checklist</h3>
               <p className="why-benefit-text">
-                Every note is treated as editorial direction and returned within sixty minutes. Revisions are
-                unlimited, and never billed.
+                A human editor runs every frame against the published MLS rules — no removed permanent fixtures, no
+                banned sky manipulation, no misrepresented furnishings. You stay off the delisting line.
               </p>
             </div>
 
             <div className="why-benefit-item">
-              <h3 className="why-benefit-title">A frame on the house</h3>
+              <h3 className="why-benefit-title">12h / 24h SLA with credits</h3>
               <p className="why-benefit-text">
-                Send a RAW set with your camera and location notes. We&apos;ll return a finished frame to the exact
-                turnaround you request — so you can see the work before you commission it.
+                12-hour delivery on photo folders, 24 hours on virtual staging, 2-hour rush on hero frames. Miss the
+                SLA, your next folder is credited. Revisions free within the hour.
               </p>
             </div>
 
             <div className="why-benefit-item">
-              <h3 className="why-benefit-title">Calibrated at scale</h3>
+              <h3 className="why-benefit-title">Workflow integration</h3>
               <p className="why-benefit-text">
-                Camera profiles, white-balance targets, and crop ratios stored per client — so your tenth folder
-                reads exactly like your first, and your hundredth.
+                Drive, Dropbox, WeTransfer, OneDrive, pCloud, MASV — send the folder however you work now. No portal to
+                log into, no new tool to learn. Deliveries come back named to your convention.
               </p>
             </div>
           </div>
@@ -311,72 +388,73 @@ export default function HomePage() {
       </section>
 
       {/* PROCESS */}
-      <section className="process-timeline-section container" id="process" data-reveal>
+      <section className="process-timeline-section container" id="process" data-reveal suppressHydrationWarning>
         <div className="section-header-block">
           <div>
-            <span className="eyebrow">The arc</span>
+            <span className="eyebrow">The workflow</span>
             <h2 className="section-title">
-              <span>From RAW capture</span><br />
-              <span>to published frame.</span>
+              <span>From RAW to delivered folder</span><br />
+              <span>— AI speed, human-verified.</span>
             </h2>
           </div>
           <p className="section-lead-paragraph">
-            Four stages. Nothing hidden, nothing improvised — the pipeline is the product.
+            Four stages. AI handles throughput; a human editor signs off. Nothing hidden — the pipeline is the product.
           </p>
         </div>
 
-        <div className="process-horizontal-grid" data-reveal data-reveal-stagger>
+        <div className="process-horizontal-grid" data-reveal data-reveal-stagger suppressHydrationWarning>
           <div className="process-stage-item">
-            <span className="process-stage-badge">01 — Brief</span>
-            <h3 className="process-stage-title">Share the project</h3>
+            <span className="process-stage-badge">01 — Style memory</span>
+            <h3 className="process-stage-title">Onboard your look</h3>
             <p className="process-stage-desc">
-              Tell the studio what the frame needs to do. Attach camera notes, prior work, or a listing script. Or
-              request a complimentary test frame.
+              Share 15–20 of your finished edits. We extract your WB, contrast, sky, sharpening, and crop preferences
+              into a stored style preset that our workflow re-applies on every future folder.
             </p>
           </div>
 
           <div className="process-stage-item">
             <span className="process-stage-badge">02 — Transfer</span>
-            <h3 className="process-stage-title">Send the files</h3>
+            <h3 className="process-stage-title">Send the RAW folder</h3>
             <p className="process-stage-desc">
-              Drop RAW brackets, drone footage, or reference frames via any link you use — Drive, Dropbox,
-              WeTransfer, OneDrive.
+              Drop RAW brackets, drone captures, or empty rooms via any cloud link — Drive, Dropbox, WeTransfer,
+              OneDrive, pCloud, MASV. Confirmation inside an hour.
             </p>
           </div>
 
           <div className="process-stage-item">
-            <span className="process-stage-badge">03 — Composition</span>
-            <h3 className="process-stage-title">The quiet work</h3>
+            <span className="process-stage-badge">03 — AI + Human QC</span>
+            <h3 className="process-stage-title">AI pre-pass, human verify</h3>
             <p className="process-stage-desc">
-              Exposure, line, tone, composition. Revisions handled inside the hour — as many as the frame needs.
+              AI handles HDR blends, sky swaps, staging, and item removal. A human editor locks your style preset,
+              straightens verticals, and runs every frame against the MLS compliance checklist before sign-off.
             </p>
           </div>
 
           <div className="process-stage-item">
-            <span className="process-stage-badge">04 — Delivery</span>
-            <h3 className="process-stage-title">Returned, resolved</h3>
+            <span className="process-stage-badge">04 — Delivery + SLA</span>
+            <h3 className="process-stage-title">Returned inside the SLA</h3>
             <p className="process-stage-desc">
-              Publish-ready assets in print and web resolutions, named to your convention, delivered inside the
-              agreed window — two hours for rush folders.
+              Print and web masters, named to your convention, delivered inside 12h / 24h — 2h for rush hero frames.
+              Miss the SLA, your next folder is credited. Revisions free within the hour.
             </p>
           </div>
         </div>
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="testimonials-section" data-reveal>
+      <section className="testimonials-section" data-reveal suppressHydrationWarning>
         <div className="container">
           <div className="section-header-block">
             <div>
               <span className="eyebrow">In their words</span>
-              <h2 className="section-title">The quiet work tends to speak for itself.</h2>
+              <h2 className="section-title">Photographers who&apos;ve stopped firefighting their editing.</h2>
             </div>
             <p className="section-lead-paragraph">
-              Notes from the photographers, agencies, and marketing teams the studio composes for.
+              Notes from US, Canadian, UK, and Australian real estate photographers and agencies on the AI + human workflow.
             </p>
           </div>
 
-          <div className="testimonials-cards-grid" data-reveal data-reveal-stagger>
+          <div className="testimonials-cards-grid" data-reveal data-reveal-stagger suppressHydrationWarning>
             {testimonials.map((t) => (
               <blockquote key={t.name} className="testimonial-quote-card">
                 <p className="quote-text">{t.quote}</p>
@@ -404,18 +482,18 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="faq-section container" id="faq" data-reveal>
+      <section className="faq-section container" id="faq" data-reveal suppressHydrationWarning>
         <div className="faq-layout-split">
           <div className="faq-intro-column">
-            <span className="eyebrow">Quietly asked</span>
+            <span className="eyebrow">FAQ</span>
             <h2 className="section-title">Questions, answered plainly.</h2>
             <p className="faq-intro-text">
-              The things worth knowing before you commission a frame — turnaround, revisions, file transfer, and
-              how the studio keeps your work consistent.
+              How the AI + human workflow works, what style memory stores, how MLS compliance is verified, SLA credit
+              terms, and the stack of file formats and cloud links we accept.
             </p>
             <div className="faq-support-box">
               <span className="faq-box-title">A question not covered here?</span>
-              <p>The studio answers directly — no form wall, no routing desk.</p>
+              <p>Studio answers directly — no form wall, no routing desk.</p>
               <a href="tel:+916383750315" className="faq-phone-link">
                 <Phone size={14} /> +91 63837 50315
               </a>
@@ -429,15 +507,16 @@ export default function HomePage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="final-cta-section" data-reveal>
+      <section className="final-cta-section" data-reveal suppressHydrationWarning>
         <div className="container final-cta-wrapper">
           <div className="final-cta-content">
             <span className="eyebrow">Begin</span>
             <h2 className="section-title text-light">
-              Ready to compose a frame that holds the room?
+              Try AI real estate photo editing with human QC — free, on two RAW frames.
             </h2>
             <p className="final-cta-text">
-              Share a brief, or a single RAW file — the studio will return a direction within the hour.
+              Send two RAW frames and the preset you shoot with. We&apos;ll return them AI-accelerated and
+              human-verified in 12 hours — judge the output on your own camera profile before you commission a folder.
             </p>
           </div>
 

@@ -1,52 +1,38 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
-const STAGGER_STEP_MS = 90;
 const THRESHOLD = 0.12;
 const ROOT_MARGIN = "0px 0px -6% 0px";
-const DEFER_MS = 120;
-
-function applyStagger(container: HTMLElement) {
-  const step = Number(container.dataset.revealStep ?? STAGGER_STEP_MS);
-  Array.from(container.children).forEach((child, i) => {
-    if (child instanceof HTMLElement) {
-      child.style.transitionDelay = `${i * step}ms`;
-    }
-  });
-}
 
 function isBelowFold(el: HTMLElement) {
   const rect = el.getBoundingClientRect();
   return rect.top >= window.innerHeight * 0.92;
 }
 
-export function ScrollReveal() {
+export function ScrollReveal({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [hydrated, setHydrated] = useState(false);
-
-  // First render after mount: flip the flag. Because this runs AFTER the initial
-  // commit, the next render is guaranteed to be post-hydration — the DOM-mutating
-  // effect below only runs on that second render cycle.
-  useEffect(() => {
-    setHydrated(true);
-  }, []);
+  const mainRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (!hydrated) return;
     if (typeof window === "undefined") return;
 
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) return;
 
     let observer: IntersectionObserver | null = null;
+    let initialized = false;
+    let fallbackTimer: number | null = null;
 
-    // Extra defer so streaming-hydrated client components finish reconciling
-    // before we touch their DOM. 120ms is imperceptible for below-fold elements.
-    const timer = window.setTimeout(() => {
+    function initReveal() {
+      if (initialized) return;
+      initialized = true;
+      cleanupListeners();
+
+      const container = mainRef.current ?? document;
       const targets = Array.from(
-        document.querySelectorAll<HTMLElement>("[data-reveal]")
+        container.querySelectorAll<HTMLElement>("[data-reveal]")
       );
 
       observer = new IntersectionObserver(
@@ -54,9 +40,6 @@ export function ScrollReveal() {
           for (const entry of entries) {
             if (!entry.isIntersecting) continue;
             const el = entry.target as HTMLElement;
-            if (el.hasAttribute("data-reveal-stagger")) {
-              applyStagger(el);
-            }
             el.removeAttribute("data-reveal-pending");
             observer?.unobserve(el);
           }
@@ -67,19 +50,41 @@ export function ScrollReveal() {
       targets.forEach((el) => {
         if (isBelowFold(el)) {
           el.setAttribute("data-reveal-pending", "");
-          if (el.hasAttribute("data-reveal-stagger")) {
-            applyStagger(el);
-          }
           observer!.observe(el);
         }
       });
-    }, DEFER_MS);
+    }
+
+    function cleanupListeners() {
+      window.removeEventListener("scroll", initReveal);
+      window.removeEventListener("wheel", initReveal);
+      window.removeEventListener("touchmove", initReveal);
+      window.removeEventListener("pointerdown", initReveal);
+      if (fallbackTimer !== null) {
+        window.clearTimeout(fallbackTimer);
+        fallbackTimer = null;
+      }
+    }
+
+    // Attach interaction listeners so DOM mutation only occurs after the user starts scrolling/interacting
+    // (guaranteeing that initial SSR hydration of the page is 100% finished).
+    window.addEventListener("scroll", initReveal, { passive: true, once: true });
+    window.addEventListener("wheel", initReveal, { passive: true, once: true });
+    window.addEventListener("touchmove", initReveal, { passive: true, once: true });
+    window.addEventListener("pointerdown", initReveal, { passive: true, once: true });
+
+    // Fallback: If the user stays idle at the top of the page, initialize after hydration has settled.
+    fallbackTimer = window.setTimeout(initReveal, 1800);
 
     return () => {
-      window.clearTimeout(timer);
+      cleanupListeners();
       observer?.disconnect();
     };
-  }, [hydrated, pathname]);
+  }, [pathname]);
 
-  return null;
+  return (
+    <main id="main-content" ref={mainRef}>
+      {children}
+    </main>
+  );
 }

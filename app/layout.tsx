@@ -8,30 +8,48 @@ import { ScrollReveal } from "@/components/scroll-reveal";
 const SITE_URL = "https://estateframe.digital";
 const SITE_NAME = "EstateFrame Digital";
 const OG_IMAGE = `${SITE_URL}/images/EstateFrame_logo.png`;
+const TITLE_DEFAULT =
+  "AI Real Estate Photo Editing + Human QC | EstateFrame";
 const DESCRIPTION =
-  "EstateFrame Digital is a boutique post-production studio for real estate — HDR, twilight, virtual staging, drone, item removal, and cinematic property films composed with editorial discipline.";
+  "AI real estate photo editing with human QC — HDR, virtual staging, twilight, drone. 12-hour SLA, MLS-compliant. For USA, Canada, UK, Australia photographers.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "EstateFrame Digital — Editorial Post-Production for Real Estate",
+    default: TITLE_DEFAULT,
     template: "%s | EstateFrame Digital",
   },
   description: DESCRIPTION,
   applicationName: SITE_NAME,
   alternates: { canonical: "/" },
+  keywords: [
+    "AI real estate photo editing",
+    "AI real estate photo editing service",
+    "real estate photo editing USA",
+    "real estate photo editing Canada",
+    "real estate photo editing Australia",
+    "MLS-compliant photo editing",
+    "AI + human real estate editing",
+    "HDR real estate photo editing",
+    "virtual staging real estate",
+    "real estate photo editing with human QC",
+    "twilight real estate photo editing",
+    "day-to-dusk real estate editing",
+    "real estate drone photo editing",
+    "real estate video editing service",
+  ],
   openGraph: {
     type: "website",
     url: SITE_URL,
     siteName: SITE_NAME,
-    title: "EstateFrame Digital — Editorial Post-Production for Real Estate",
+    title: TITLE_DEFAULT,
     description: DESCRIPTION,
-    images: [{ url: OG_IMAGE, width: 1024, height: 1024, alt: "EstateFrame Digital studio mark" }],
+    images: [{ url: OG_IMAGE, width: 1024, height: 1024, alt: "EstateFrame Digital — AI real estate photo editing with human QC" }],
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "EstateFrame Digital — Editorial Post-Production for Real Estate",
+    title: TITLE_DEFAULT,
     description: DESCRIPTION,
     images: [OG_IMAGE],
   },
@@ -61,17 +79,28 @@ const professionalServiceSchema = {
     { "@type": "Place", name: "Worldwide" },
   ],
   serviceType: [
-    "Real estate photo editing",
-    "HDR photo blending",
-    "Day-to-night conversion",
+    "AI real estate photo editing",
+    "AI + human HDR photo editing",
+    "MLS-compliant real estate photo editing",
+    "Day-to-dusk conversion",
     "Twilight photo enhancement",
-    "Virtual staging",
+    "AI virtual staging with human QC",
     "Real estate video editing",
-    "Item and object removal",
+    "AI item and object removal",
     "Aerial and drone photo editing",
   ],
-  currenciesAccepted: "USD, CAD, AUD, GBP, NZD, INR",
-  paymentAccepted: "Stripe, Wise, PayPal, Bank transfer",
+  slogan: "Every frame in your style. Every shoot, every time.",
+  knowsAbout: [
+    "AI real estate photo editing workflow",
+    "MLS compliance for photo editing (Compass, Coldwell Banker, Keller Williams, RE/MAX)",
+    "Realtor.ca photo editing standards",
+    "realestate.com.au and Domain.com.au upload specifications",
+    "Per-photographer style memory and preset calibration",
+    "Flambient flash and ambient exposure blending",
+    "HDR bracket blending with window pulls",
+    "Virtual staging quality control",
+  ],
+  paymentAccepted: "Stripe, Wise, PayPal, Bank transfer, USD, CAD, AUD, GBP, NZD, INR",
   availableLanguage: ["English"],
   sameAs: [] as string[],
 };
@@ -83,9 +112,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         <BootLoader />
-        <ScrollReveal />
         <Header />
-        <main>{children}</main>
+        <ScrollReveal>{children}</ScrollReveal>
         <Footer />
         <script
           type="application/ld+json"

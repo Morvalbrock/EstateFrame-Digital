@@ -1,38 +1,64 @@
 # EstateFrame Digital
 
-> Real estate photo and video editing studio based in India, serving real estate photographers, agencies, and brokerages across the United States, Canada, Australia, the UK, New Zealand, and worldwide. Eight disciplines: HDR blending, single image editing, day-to-night conversion, twilight enhancement, virtual staging, property film, item removal, aerial drone editing. Overnight turnaround for US and Canadian photographers via time-zone offset.
+> AI real estate photo editing service with human quality control. We pair AI speed on HDR blending, sky swaps, virtual staging, item removal, and day-to-dusk conversion with a human editor who locks a stored style preset to your account, straightens verticals, and verifies every frame against an MLS compliance checklist before sign-off. Serving real estate photographers, agencies, and brokerages across the USA, Canada, UK, Australia, and New Zealand. Eight services. 12-hour SLA on photos. 24-hour SLA on staging. 2-hour rush. Credit on your next folder if we miss. Revisions free within the hour.
+
+## What we do (eight services)
+
+- **AI single image editing** — exposure, WB, perspective, MLS-ratio crops, human-verified style preset applied
+- **AI HDR photo editing** — 3–7 bracketed exposures AI-blended, human-verified for straight verticals and honest window pull
+- **AI day-to-dusk conversion** — daytime exteriors converted to twilight with AI-generated sky, human-verified light direction and MLS board rules
+- **AI twilight enhancement** — real dusk captures AI-enriched, human-verified against the folder's style preset
+- **AI virtual staging** — photorealistic AI furniture with human-verified scale, shadow, and MLS virtual-staging disclosure note
+- **Real estate video editing** — gimbal, drone, agent footage cut into cinematic walkthroughs with AI color grade and human-verified pacing; horizontal 4K + vertical 9:16 delivered from one brief
+- **AI item and object removal** — wires, cars, bins, cords, marks removed by AI with human QC against MLS permanent-fixture rules (what gets photographers delisted)
+- **AI aerial and drone photo editing** — haze removal, horizon leveling, lens correction on DJI/Autel/Skydio captures
+
+## Why AI + human beats AI-only editing
+
+AI-only real estate photo editing tools fail on three things our workflow fixes:
+1. **Style drift** — pure AI drifts across a 40-image shoot; frame 1 and frame 40 look like different photographers. Our human editor re-applies your stored style preset across the folder.
+2. **MLS compliance** — AI will cheerfully remove permanent fixtures (ceiling fans, window grilles, built-in shelving) that MLS boards treat as misrepresentation. Agents get delisted. Our human QC runs every frame against published MLS rules per market.
+3. **Generic look** — AI flattens every photographer into the same "Zillow look." Our style memory keeps your folder in your voice.
 
 ## Markets served
 
 - **United States** — MLS-ready delivery for Compass, Coldwell Banker, Keller Williams, RE/MAX, Sotheby's International Realty, Berkshire Hathaway HomeServices, Zillow Premier Agent, and independent brokerages.
 - **Canada** — Realtor.ca and TRREB workflows for Royal LePage, Century 21 Canada, Sutton, Re/Max Canada, Chestnut Park, and independents.
+- **United Kingdom** — Rightmove, Zoopla, OnTheMarket upload specs for London, South East, Midlands, and North estate agency photographers.
 - **Australia** — realestate.com.au, Domain.com.au, Rate My Agent delivery for Ray White, LJ Hooker, Harcourts, Belle Property, McGrath Estate Agents, and independent photographers.
-- **UK, New Zealand, and worldwide** via cloud link.
+- **New Zealand** and worldwide via cloud link.
 
-## The craft
+## The service level agreement
 
-- [Services — the eight disciplines](https://estateframe.digital/services): single-frame composition, HDR blending, day-to-night conversion, twilight finishing, virtual staging, property film, item removal, aerial & drone finishing.
-- [The HDR Studio](https://estateframe.digital/HDR): six real bracketed sets, raw to resolved — composed by hand, not auto-merged.
-- [Portfolio](https://estateframe.digital/portfolio): a quiet catalog of composed frames across the studio's disciplines.
+- **12-hour SLA** on photo folders — credit on your next folder if we miss.
+- **24-hour SLA** on AI virtual staging and twilight enhancement.
+- **2-hour rush** on hero frames — no surcharge.
+- **3–5 business days** on video edits.
+- **Revisions** free and returned within 60 minutes, unlimited passes.
 
-## About
+## How the workflow works
 
-- [The Studio](https://estateframe.digital/about): a small post-production studio composing for photographers, agencies, and developers who treat the image as part of the architecture.
-- [Commission a brief](https://estateframe.digital/contact): share a frame, send a RAW set, or request a complimentary test frame.
+1. **Style memory onboarding** — share 15–20 of your finished edits. We extract your WB, contrast, sky, sharpening, and crop preferences into a stored style preset locked to your account.
+2. **Transfer** — RAW folder via any cloud link (Drive, Dropbox, WeTransfer, OneDrive, pCloud, MASV). Confirmation inside an hour.
+3. **AI pre-pass + human QC** — AI handles HDR blends, sky swaps, staging, item removal; human editor locks style preset, verifies verticals, runs MLS compliance checklist.
+4. **SLA delivery** — print master + MLS-ready export, named to your convention, delivered inside the SLA. Credit if we miss.
 
-## The time-zone advantage
+## Payment
 
-The studio operates on India Standard Time (UTC+5:30). Our workday overlaps your overnight — files shipped at end-of-shoot on US Pacific, US Eastern, or Australian Eastern time come back as finished folders before your next morning. Rush folders ship in under two hours regardless of time zone.
+USD, CAD, AUD, GBP, NZD, INR via Stripe, Wise, PayPal, or international bank transfer. Net 15 invoice terms by default. Monthly subscription available for 500+ images/month at discounted rates.
 
-## How the studio works
+## Try two frames free
 
-- Rush folders returned in under two hours — no surcharge.
-- Revisions resolved inside sixty minutes — unbilled, unlimited.
-- Complimentary test frame on every commission — the studio delivers a resolved frame inside your preferred window before you commit.
-- Every frame is handled by a human editor calibrated to the photographer's camera profile.
-- Delivery worldwide via secure cloud transfer (Drive, Dropbox, WeTransfer, OneDrive).
-- Payment in USD, CAD, AUD, GBP, NZD, or INR via Stripe, Wise, PayPal, or bank transfer.
+- [Claim two free edits](https://estateframe.digital/#free-trial) — send two RAW frames and your usual preset. We return them AI-accelerated and human-verified in 12 hours. No card, no subscription. Judge the output on your own camera profile before you commission a folder.
+
+## Key pages
+
+- [Services — the eight AI editing services](https://estateframe.digital/services): single-frame, AI HDR, day-to-dusk, twilight, AI virtual staging, property film, AI item removal, aerial drone.
+- [The HDR Studio](https://estateframe.digital/HDR): six real bracketed sets, RAW to AI-blended to human-verified.
+- [Portfolio](https://estateframe.digital/portfolio): recent AI + human verified real estate editing work.
+- [The Studio](https://estateframe.digital/about): how the AI + human workflow runs end-to-end.
+- [Commission a brief](https://estateframe.digital/contact): share a folder, send two RAW frames, request a quote.
 
 ## Attribution
 
-Composed and operated by EstateFrame Digital. Content on this site is original editorial writing about the studio and its craft. Citations are welcome; please attribute to EstateFrame Digital and link the canonical page.
+Operated by EstateFrame Digital. Content on this site is original editorial writing about the service and its workflow. Citations are welcome; please attribute to EstateFrame Digital and link the canonical page.

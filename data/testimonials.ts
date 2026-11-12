@@ -8,23 +8,23 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "The studio reads like a quiet collaborator — not a vendor. Our folders ship with a consistency we couldn't hold in-house, and the window pulls feel composed, never over-finished.",
+      "AI tools were fast but my folders drifted — frame 1 and frame 40 looked like different shoots. The style preset lock here is the fix. Fourteen weeks in, every folder reads like my work.",
     name: "Marcus Vance",
-    role: "Lead real-estate photographer",
-    location: "Residential & editorial",
+    role: "Real estate photographer",
+    location: "Pacific Northwest, USA",
   },
   {
     quote:
-      "Twilight work and virtual staging shifted enquiry rates on our luxury listings within a month. What I value most is restraint — they never push a frame past where the room can carry it.",
+      "We tried four AI-only editors last year. Two folders got agents into MLS trouble over sky swaps and a removed ceiling fan. The human QC pass is why we switched here. Zero MLS complaints since.",
     name: "Elena Rostova",
     role: "Marketing director",
-    location: "Prestige property agency",
+    location: "Prestige property agency, Toronto",
   },
   {
     quote:
-      "From floor plans to walkthrough film, having one hand on the full folder keeps the identity of each listing intact. The studio holds the voice from frame one to frame hundred.",
+      "From AI virtual staging to drone finishing, one editor owns the folder end-to-end. The 12-hour SLA is honoured, and twice when they missed it we got the credit without asking.",
     name: "David Chen",
     role: "Development partner",
-    location: "Urban living developments",
+    location: "Urban developments, Sydney",
   },
 ];
